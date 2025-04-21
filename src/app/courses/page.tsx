@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 
 // Define the type for a single course
 type Course = {
@@ -10,7 +9,6 @@ type Course = {
   guid: string;
   thumbnail_url?: string;
   course_category: Array<{ name: string }>;
-  product_id?: number;
 };
 
 export default function CoursesPage() {
@@ -27,7 +25,7 @@ export default function CoursesPage() {
         if (data.error) {
           setError(data.error);
         } else {
-          const filteredCourses = data.data.posts.filter((course: Course) =>
+          const filteredCourses = data.data.filter((course: Course) =>
             !course.post_title.toLowerCase().includes("assessors guide")
           );
           setCourses(filteredCourses);
@@ -42,8 +40,8 @@ export default function CoursesPage() {
   }, []);
 
   return (
-    <div className="container flexflex-col items-center text-center mx-auto px-4">
-      <h1 className="text-3xl font-bold mb-6">Featured Course</h1>
+    <div className="container flex flex-col items-center text-center mx-auto px-4">
+      <h1 className="text-3xl font-bold mb-6">Featured Courses</h1>
       {error && <p className="text-red-500">{error}</p>}
       <div>
         {courses.length > 0 ? (
@@ -59,9 +57,9 @@ export default function CoursesPage() {
             }, {})
           ).map(([category, coursesInCategory]: [string, Course[]]) => (
             <div key={category} className="mb-8">
-              <h2 className="text-2xl font-semibold mb-4 text-left">{category}</h2>
-              <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 justify-center">
-                {coursesInCategory.map((course: Course) => (
+              <h2 className="text-2xl text-left font-semibold mb-4">{category}</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {coursesInCategory.map((course) => (
                   <div key={course.ID} className="course-card p-4 border rounded shadow-md">
                     {/* Render course image */}
                     {course.thumbnail_url && (
@@ -72,13 +70,12 @@ export default function CoursesPage() {
                       />
                     )}
                     <h2 className="text-xl font-semibold">{course.post_title}</h2>
-                    <p className="text-gray-600 mt-2">{course.guid}</p>
-                    <Link
-                      href={`/courses/${course.ID}`}
-                      className="mt-4 inline-block bg-blue-600 text-white text-xl px-4 py-2 rounded hover:bg-blue-700 transition"
+                    <a
+                      href={course.guid}
+                      className="text-blue-600 mt-4 inline-block"
                     >
                       View Course
-                    </Link>
+                    </a>
                   </div>
                 ))}
               </div>

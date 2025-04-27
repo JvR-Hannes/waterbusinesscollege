@@ -23,7 +23,7 @@ const navLinks = [
       { label: "Short Courses", href: "/application-procedures-short-courses" },
       { label: "DIY Courses", href: "/application-procedures-diy-courses" },
       { label: "Application Form", href: "/application-form" },
-      { label: "RPL Policy", href: "/rpl-policy" },
+      { label: "RPL Policy and Implementation Process", href: "/rpl-policy" },
     ],
   },
   {

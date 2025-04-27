@@ -4,8 +4,9 @@ import { useState } from 'react';
 
 const faqs = [
   {
-    question: "How do I enroll in a course?",
-    answer: "To enroll, simply select your desired course, click 'Enroll Now' and follow the checkout process.",
+    question: "Provide more information on the Water Reticulation Practitioner Qualification (NQF Level 4)",
+    answer: `A Water Reticulation Practitioner installs and maintains the water reticulation infrastructure, identifies and attends to water leaks, installs water meters, maintains the water system and interfaces with colleagues (QCTO Curriculum Document).
+             Please see the full SAQA qualification document on the WBC website.`,
   },
   {
     question: "Are the courses accredited?",

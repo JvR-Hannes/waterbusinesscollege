@@ -1,0 +1,11 @@
+@keyframes attentionAnimation {
+  0%   { transform: scale(1); }
+  25%  { transform: scale(1.05) rotate(1deg); }
+  50%  { transform: scale(0.95) rotate(-1deg); }
+  75%  { transform: scale(1.02) rotate(0.5deg); }
+  100% { transform: scale(1); }
+}
+
+.animation-attentionAnimation {
+  animation: attentionAnimation 5s ease-in infinite;
+}

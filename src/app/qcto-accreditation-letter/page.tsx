@@ -2,15 +2,15 @@
 
 import Link from 'next/link';
 
-export default function QctoAccreditationLetterDuplicate() {
+export default function QctoAccreditationLetter() {
   return (
     <div className="p-4 max-w-7xl mx-auto">
-      <h1 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800">
-        QCTO Accreditation Letter (Duplicate)
+      <h1 className="text-2xl md:text-3xl text-center font-bold mb-4 text-gray-800">
+        QCTO Accreditation Letter
       </h1>
       <div className="w-full h-[75vh] mb-6">
         <iframe
-          src="/pdfs/water-reticulation.pdf"
+          src="/pdfs/qcto-accreditation-letter.pdf"
           className="w-full h-full border rounded shadow"
         />
       </div>

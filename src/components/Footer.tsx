@@ -6,13 +6,12 @@ export default function Footer() {
       <div className="container mx-auto px-4 grid md:grid-cols-4 gap-8 text-sm">
         {/* Logo and Paragraph */}
         <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-6">
-          <div className="w-full md:w-[250px] h-[120px]">
+          <div className="w-full md:w-[900px] h-[150px]">
             <Image
               src="/images/wbc-white.png" // ✅ No "@/public" needed
-              alt="Logo"
+              alt="WBC Logo"
               width={500}
-              height={500}
-              layout="intrinsic" // Auto-resizing image
+              height={500} // Auto-resizing image
             />
           </div>
           <div className="text-base">
@@ -33,7 +32,7 @@ export default function Footer() {
 
         {/* Address / Links */}
         <div>
-          <h3 className="font-semibold text-lg mb-2">Visit Us</h3>
+          <h3 className="font-semibold text-xl mb-2">Visit Us</h3>
           <p>Offices H4,<br/>
               The Willows Office Park,<br/>
               559 Farm Road,<br/>
@@ -44,7 +43,7 @@ export default function Footer() {
 
         {/* Subscribe */}
         <div>
-          <h3 className="font-semibold text-lg mb-2">Subscribe</h3>
+          <h3 className="font-semibold text-xl mb-2">Subscribe</h3>
           <p className="mb-2 text-gray-400">Get updates & course announcements:</p>
           <form className="flex flex-col space-y-2">
             <input

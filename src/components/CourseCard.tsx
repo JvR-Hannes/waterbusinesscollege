@@ -1,43 +1,56 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ReactNode } from "react";
 
 type Props = {
   title: string;
   description: ReactNode;
   imageUrl: string;
+  href?: string;
   onClick?: () => void;
+  variant?: "default" | "large";
+  buttonText?: string;
+  customStyles?: string;
 };
 
-const CourseCard = ({ title, description, imageUrl, onClick }: Props) => {
+const CourseCard = ({ title, description, imageUrl, href, variant = "default", buttonText, customStyles }: Props) => {
   return (
-    <div
-      className="relative w-full max-w-xl h-[400px] mx-auto overflow-hidden rounded-[20px] bg-white shadow-lg group transition-all duration-700 ease-in-out animate-floating"
-      onClick={onClick}
-    >
-      {/* Animated Background Circle */}
-      <div className="absolute -top-10 -left-10 w-40 h-40 bg-blue-300 opacity-30 rounded-full blur-2xl z-0 group-hover:opacity-50 transition-opacity duration-500"></div>
+    <div className={`relative group mx-auto p-8 space-y-4 transition-all duration-500 ease-in-out overflow-visible ${customStyles ? customStyles : variant === "large"
+        ? "w-[360px] md:w-[720px] h-[360px]"
+        : "w-[300px] hover:w-[720px] h-[350px]"
+      }`}>
+      {/* Card Background & Content */}
+      <div className="absolute rounded-2xl inset-0 z-20 flex flex-col justify-center px-8 py-8 transition-all duration-500 text-white-900 group-hover:bg-[#3e64de] group-hover:text-white">
+        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 pr-55 text-left">
+          <h3 className="text-2xl text-white-900 mb-6 mt-3">
+            <span className="text-white">{title}</span>
+          </h3>
+          <div className="text-md text-white-700 line-clamp-7 mb-3 mt-3">
+            {description}
+          </div>
 
-      {/* Course Image */}
-      <div className="absolute right-0 bottom-0 w-1/2 h-full z-10">
+          {/* ✅ Only this button navigates */}
+          {href && (
+            <Link
+              href={href}
+              className="inline-block mt-2 mb-2 px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded transition"
+            >
+              {buttonText || "View The Courses"}
+            </Link>
+          )}
+        </div>
+      </div>
+
+      {/* Floating Image */}
+      <div className={`absolute top-0 left-0 h-full z-20 transition-transform duration-500 ease-in-out group-hover:scale-105 ${variant === "large" ? "w-[360px] md:group-hover:translate-x-[480px]" : "w-[300px] group-hover:translate-x-[460px]"
+        }`}>
         <Image
           src={imageUrl}
           alt={title}
-          width={400}
-          height={400}
-          className="object-contain w-full h-full"
+          width={variant === "large" ? 360 : 300}
+          height={variant === "large" ? 360 : 300}
+          className="w-full h-full object-contain rounded-2xl"
         />
-      </div>
-
-      {/* Text Content */}
-      <div className="relative z-20 flex flex-col justify-center h-full text-left p-8 space-y-4 max-w-[60%]">
-        <h3 className="text-lg font-semibold text-gray-900">{title}</h3>
-        <div className="text-sm text-gray-600 line-clamp-5">{description}</div>
-        <a
-          href="#"
-          className="inline-block mt-4 px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded transition"
-        >
-          View Course
-        </a>
       </div>
     </div>
   );

@@ -4,20 +4,25 @@ type Course = {
   title: string;
   description: ReactNode;
   image: string;
+  category: string;
+  href: string;
 };
 
 export const courses: Course[] = [
   {
-    title: "Water Business Essentials",
+    title: ("Water Reticulation Practitioner \n(NQF Level 4)"), /*Adjust the brackets*/
     description: (
       <p>
         This qualification is designed for individuals aiming to install, operate,
-        and maintain water supply infrastructure. It's suitable for technical staff
+        and maintain water supply infrastructure.
+        <br />It's suitable for technical staff
         seeking formal recognition of their experience and for newcomers entering
         the water sector.
       </p>
     ),
     image: "/images/courses/waterreticulation.png",
+    category: "Occupational Qualifications",
+    href: "/courses/occupational-qualifications",
   },
   {
     title: "Self-Study Foundation Courses",
@@ -30,6 +35,8 @@ export const courses: Course[] = [
       </p>
     ),
     image: "/images/courses/foundation.png",
+    category: "Foundation Courses",
+    href: "/courses/foundation-courses",
   },
   {
     title: "Short Courses",
@@ -47,6 +54,8 @@ export const courses: Course[] = [
       </>
     ),
     image: "/images/courses/shortcourse.png",
+    category: "Short Courses",
+    href: "/courses/short-courses",
   },
   {
     title: "Do-It-Yourself (DIY) Courses",
@@ -58,11 +67,11 @@ export const courses: Course[] = [
           municipal water supply systems, and on the classification and ARD/ABA
           assessment of waste materials (incl. mine wastes), etc.
         </p>
-        <p>The DIY courses are available 24/7 and are ideal for:</p>
-        <ol className="list-decimal list-inside ml-4">
+        <p>The DIY courses are available 24/7 and are ideal for:</p> 
+        <ol className="list-decimal list-inside ml-1"> 
           <li>
             <strong>Technicians, Younger practitioners</strong> and{" "}
-            <strong>Senior and post-graduate students</strong> in the water, related
+            <strong>Senior and post-graduate students</strong> in the water, related 
             engineering, environmental and science disciplines
           </li>
           <li>
@@ -72,5 +81,7 @@ export const courses: Course[] = [
       </>
     ),
     image: "/images/courses/diy.png",
+    category: "DIY Courses",
+    href: "/courses/diy-courses",
   },
-];
+];/*Adjust margin size on DIY Course, Adjust button , Adjust CourseCard height*/

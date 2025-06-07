@@ -1,89 +1,71 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-
-// Define the type for a single course
-type Course = {
-  ID: number;
-  post_title: string;
-  guid: string;
-  thumbnail_url?: string;
-  course_category: Array<{ name: string }>;
-};
+import { fullCourses } from "@/fullCourseData";
 
 export default function CoursesPage() {
-  // Specify that courses will be an array of Course objects
-  const [courses, setCourses] = useState<Course[]>([]); // Type is an array of Course objects
-  const [error, setError] = useState('');
-
-  useEffect(() => {
-    const fetchCourses = async () => {
-      try {
-        const res = await fetch('/api/getCourses');
-        const data = await res.json();
-
-        if (data.error) {
-          setError(data.error);
-        } else {
-          const filteredCourses = data.data.filter((course: Course) =>
-            !course.post_title.toLowerCase().includes("assessors guide")
-          );
-          setCourses(filteredCourses);
-        }
-      } catch (error) {
-        console.error('Error fetching courses:', error);
-        setError('Failed to fetch courses');
-      }
-    };
-
-    fetchCourses();
-  }, []);
+  const groupedCourses = fullCourses.reduce(
+    (acc: Record<string, typeof fullCourses>, course) => {
+      if (!acc[course.category]) acc[course.category] = [];
+      acc[course.category].push(course);
+      return acc;
+    },
+    {}
+  );
 
   return (
-    <div className="container flex flex-col items-center text-center mx-auto px-4">
-      <h1 className="text-3xl font-bold mb-6">Featured Courses</h1>
-      {error && <p className="text-red-500">{error}</p>}
-      <div>
-        {courses.length > 0 ? (
-          // Grouping courses by category
-          Object.entries(
-            courses.reduce((acc: Record<string, Course[]>, course: Course) => {
-              course.course_category.forEach((category) => {
-                // If the category doesn't exist in accumulator, create it
-                if (!acc[category.name]) acc[category.name] = [];
-                acc[category.name].push(course);
-              });
-              return acc;
-            }, {})
-          ).map(([category, coursesInCategory]: [string, Course[]]) => (
-            <div key={category} className="mb-8">
-              <h2 className="text-2xl text-left font-semibold mb-4">{category}</h2>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {coursesInCategory.map((course) => (
-                  <div key={course.ID} className="course-card p-4 border rounded shadow-md">
-                    {/* Render course image */}
-                    {course.thumbnail_url && (
-                      <img
-                        src={course.thumbnail_url}
-                        alt={course.post_title}
-                        className="course-image w-full h-auto mb-4"
-                      />
-                    )}
-                    <h2 className="text-xl font-semibold">{course.post_title}</h2>
-                    <a
-                      href={course.guid}
-                      className="text-blue-600 mt-4 inline-block"
-                    >
-                      View Course
-                    </a>
+    <div className="bg-white min-h-screen">
+      <div className="container mx-auto px-4 py-12">
+        <h1 className="text-3xl font-bold mb-10 text-center text-blue-700">All Courses</h1>
+
+        {Object.entries(groupedCourses).map(([category, group]) => (
+          <div key={category} className="mb-12">
+            <h2 className="text-2xl font-bold text-blue-800 mb-6 border-b pb-2">{category}</h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {group.map((course, idx) => (
+                <div
+                  key={`${category}-${idx}`}
+                  className="flex flex-col h-[500px] w-full max-w-[300px] border border-gray-300 rounded-lg shadow hover:shadow-lg transition overflow-hidden bg-white"
+                >
+                  <img
+                    src={course.image}
+                    alt={course.title}
+                    className="w-full h-80 object-contain bg-gray-50 p-2"
+                  />
+
+                  <div className="p-4 flex flex-col flex-grow">
+                    <h3 className="text-base font-semibold text-gray-800 mb-2">
+                      {course.title}
+                    </h3>
+
+                    <div className="flex-grow flex flex-col justify-end">
+                      {course.price && (
+                        <div className="flex justify-between text-sm text-gray-800 mb-4">
+                          <span className="text-gray-500">Price:</span>
+                          <span className="font-bold">{course.price}</span>
+                        </div>
+                      )}
+
+                      {course.requiresStudentDiscountApplication ? (
+                        <a
+                          href="/student-discount-application"
+                          className="inline-block text-center px-8 py-2 bg-white border border-blue-600 text-blue-600 text-sm rounded hover:bg-blue-700 hover:text-white transition"
+                        >
+                          APPLY
+                        </a>
+                      ) : (
+                        <a
+                          href={course.link}
+                          className="inline-block text-center px-8 py-2 bg-white border border-blue-600 text-blue-600 text-sm rounded hover:bg-blue-700 hover:text-white transition"
+                        >
+                          PURCHASE
+                        </a>
+                      )}
+                    </div>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-          ))
-        ) : (
-          <p>No courses available at the moment.</p>
-        )}
+          </div>
+        ))}
       </div>
     </div>
   );

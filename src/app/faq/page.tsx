@@ -704,7 +704,7 @@ export default function FAQPage() {
   };
 
   return (
-    <main className="py-16 px-4 max-w-4xl mx-auto">
+    <main className="py-16 px-4 max-w-6xl mx-auto">
       <h1 className="text-3xl font-bold mb-4 text-center">Frequently Asked Questions</h1>
       <p className="text-center text-gray-600 mb-10">
         Find answers to the most common questions below.
@@ -717,7 +717,7 @@ export default function FAQPage() {
           >
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full text-left px-6 py-4 bg-white hover:bg-gray-50 focus:outline-none flex justify-between items-center"
+              className="w-full text-left px-6 py-4 bg-[#68A4D7] hover:bg-gray-50 focus:outline-none flex justify-between items-center"
             >
               <span className="font-medium">{faq.question}</span>
               <span>{openIndex === index ? '-' : '+'}</span>

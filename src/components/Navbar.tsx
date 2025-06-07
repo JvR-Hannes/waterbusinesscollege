@@ -18,17 +18,14 @@ const navLinks = [
     label: "Application Procedures",
     href: "/application-procedures",
     submenu: [
+      { label: "Application Procedures", href: "/application-procedures" },
       { label: "FAQ", href: "/faq" },
-      { label: "Modules", href: "/application-procedures-modules" },
-      { label: "Short Courses", href: "/application-procedures-short-courses" },
-      { label: "DIY Courses", href: "/application-procedures-diy-courses" },
-      { label: "Application Form", href: "/application-form" },
+      { label: "Application Procedures (Modules)", href: "/application-procedures-modules" },
+      { label: "Application Procedures (Short Courses)", href: "/application-procedures-short-courses" },
+      { label: "Application Procedures (DIY Courses)", href: "/application-procedures-diy-courses" },
+      { label: "Occupational Qualification Application Form", href: "/qualification-application" },
       { label: "RPL Policy and Implementation Process", href: "/rpl-policy" },
     ],
-  },
-  {
-    label: "About Us",
-    href: "/about",
   },
   {
     label: "Courses",
@@ -38,8 +35,8 @@ const navLinks = [
     label: "My Account",
     href: "/my-account",
     submenu: [
-      { label: "Checkout", href: "/checkout" },
-      { label: "Cart", href: "/cart" },
+      { label: "Checkout", href: "https://waterbusinesscollege.co.za/checkout/" },
+      { label: "Cart", href: "https://waterbusinesscollege.co.za/cart/" },
     ],
   },
   {
@@ -58,11 +55,8 @@ const navLinks = [
     ],
   },
   {
-    label: "Contact",
+    label: "Contact us",
     href: "/contact-us",
-    submenu: [
-      { label: "Blog", href: "/blog-page" },
-    ],
   },
 ];
 
@@ -88,16 +82,16 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav ref={navRef} className="bg-white shadow-md text-sm font-medium text-gray-800 px-6 py-4">
+    <nav ref={navRef} className="bg-white shadow-md text-xl font-medium text-[#2E528E] px-12 py-6">
       <div className="container mx-auto flex justify-between items-center">
 
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2">
+        <Link href="/" className="flex items-center gap-6">
           <Image 
             src="/images/wbc-main.png" // Replace with your logo path
             alt="Logo"
-            width={100} // Adjust logo size
-            height={100} // Adjust logo size
+            width={150} // Adjust logo size
+            height={150} // Adjust logo size
           />
         </Link>
 
@@ -135,7 +129,7 @@ export default function Navbar() {
               </Link>
 
               {item.submenu && openMenu === index && (
-                <ul className="absolute left-0 top-full mt-2 bg-white border rounded-lg shadow-md w-64 z-10">
+                <ul className="absolute left-0 top-full mt-2 bg-white border rounded-lg shadow-md w-64 z-1000">
                   {item.submenu.map((sub, subIndex) => (
                     <li key={subIndex}>
                       <Link

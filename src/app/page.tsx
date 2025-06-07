@@ -1,13 +1,18 @@
 import Hero from "@/components/Hero";
 import Courses from "@/components/courses";
-import News from "@/components/News";
 import BlogPreview from '@/components/BlogPreview';
+import Qualifications from "@/components/Qualifications";
+import QualificationsGrid from "@/components/QualificationsGrid";
+import QualificationStructure from "@/components/QualificationStructure";
 
 export default function Home() {
   return (
-    <main className="bg-white">
+    <main className="bg-gray-400 !important">
       <Hero />
       <Courses />
+      <Qualifications />
+      <QualificationsGrid />
+      <QualificationStructure />
       <BlogPreview />
     </main>
   );

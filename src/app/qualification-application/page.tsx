@@ -35,7 +35,7 @@ export default function QualificationApplicationPage() {
     setFormData((prev) => ({ ...prev, file }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 

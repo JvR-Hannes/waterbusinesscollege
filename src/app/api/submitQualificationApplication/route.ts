@@ -4,6 +4,7 @@ import formidable from "formidable";
 import fs from "fs";
 import { IncomingMessage } from "http";
 import { Readable } from "stream";
+import { IncomingHttpHeaders } from "http";
 
 export const config = {
     api: {
@@ -33,7 +34,7 @@ async function requestToIncomingMessage(req: Request): Promise<IncomingMessage> 
         }
     }) as IncomingMessage;
 
-    stream.headers = Object.fromEntries(req.headers.entries()) as any;
+    stream.headers = Object.fromEntries(req.headers.entries()) as IncomingHttpHeaders;
     stream.method = req.method || "POST";
     stream.url = req.url || "";
 

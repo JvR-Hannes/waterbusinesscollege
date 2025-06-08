@@ -16,12 +16,6 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
 });
 
-const raleway = Raleway({
-  subsets: ["latin"],
-  weight: ["400", "700", "900"],
-  variable: "--font-raleway",
-});
-
 export const metadata: Metadata = {
   title: "Water Business College",
   description: "Created by 360Inc",

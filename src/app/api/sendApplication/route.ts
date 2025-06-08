@@ -14,11 +14,32 @@ export const config = {
 };
 
 async function requestToIncomingMessage(req: Request): Promise<IncomingMessage> {
-  const readable = Readable.fromWeb(req.body as any) as unknown as IncomingMessage;
-  readable.headers = Object.fromEntries(req.headers.entries());
-  readable.method = req.method || "POST";
-  readable.url = req.url || "";
-  return readable;
+  const reader = req.body?.getReader();
+  const stream = new Readable({
+    async read() {
+      if (!reader) {
+        this.push(null);
+        return;
+      }
+
+      try {
+        const { done, value } = await reader.read();
+        if (done) {
+          this.push(null);
+        } else {
+          this.push(value);
+        }
+      } catch (err) {
+        this.destroy(err instanceof Error ? err : new Error(String(err)));
+      }
+    }
+  }) as IncomingMessage;
+
+  stream.headers = Object.fromEntries(req.headers.entries()) as any;
+  stream.method = req.method || "POST";
+  stream.url = req.url || "";
+
+  return stream;
 }
 
 function getField(fields: formidable.Fields, key: string): string {
@@ -74,6 +95,8 @@ export async function POST(req: Request) {
           approved: null,
         });
 
+        console.log(`Saved token for ${email}: ${token}`);
+
         const mailOptions = {
           from: `"Application Form" <${process.env.EMAIL_USER}>`,
           to: "admin@yourdomain.com",
@@ -92,11 +115,11 @@ Decline: ${declineLink}
           `,
           attachments: file
             ? [
-                {
-                  filename: file.originalFilename || "document",
-                  content: fs.createReadStream(file.filepath),
-                },
-              ]
+              {
+                filename: file.originalFilename || "document",
+                content: fs.createReadStream(file.filepath),
+              },
+            ]
             : [],
         };
 

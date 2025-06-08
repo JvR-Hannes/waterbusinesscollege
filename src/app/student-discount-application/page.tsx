@@ -33,7 +33,11 @@ export default function StudentDiscountApplicationPage() {
 
     const payload = new FormData();
     Object.entries(formData).forEach(([key, value]) => {
-      if (value) payload.append(key, value as any);
+      if (value instanceof Blob) {
+        payload.append(key, value); // for File
+      } else if (typeof value === "string") {
+        payload.append(key, value); // for text fields
+      }
     });
 
     try {

@@ -41,7 +41,11 @@ export default function QualificationApplicationPage() {
 
     const payload = new FormData();
     Object.entries(formData).forEach(([key, value]) => {
-      if (value) payload.append(key, value as any);
+      if (value instanceof Blob) {
+        payload.append(key, value); // for File
+      } else if (typeof value === "string") {
+        payload.append(key, value); // for text fields
+      }
     });
 
     try {
@@ -202,9 +206,8 @@ export default function QualificationApplicationPage() {
           <button
             type="submit"
             disabled={loading}
-            className={`w-full bg-blue-600 text-white font-semibold py-2 px-6 rounded transition duration-200 ${
-              loading ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-700"
-            }`}
+            className={`w-full bg-blue-600 text-white font-semibold py-2 px-6 rounded transition duration-200 ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-700"
+              }`}
           >
             {loading ? "Submitting..." : "Submit Application"}
           </button>
@@ -259,7 +262,7 @@ export default function QualificationApplicationPage() {
             Water practitioners in the private sector as well as staff of both water services and water resource management institutions.
           </li>
           <li>
-            Technical staff that may either be recently employed and/or have many years’ experience but no formal academic qualifications.
+            {"Technical staff that may either be recently employed and/or have many years’ experience but no formal academic qualifications."}
           </li>
           <li>
             Qualified water practitioners that intend to improve their education and/or change discipline.

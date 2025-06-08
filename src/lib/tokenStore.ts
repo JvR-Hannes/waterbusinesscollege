@@ -24,7 +24,7 @@ function saveTokenStore(store: Record<string, TokenData>) {
   fs.writeFileSync(filePath, JSON.stringify(store, null, 2));
 }
 
-let tokenMap = loadTokenStore();
+const tokenMap = loadTokenStore();
 
 export function saveToken(token: string, data: TokenData) {
   tokenMap[token] = data;

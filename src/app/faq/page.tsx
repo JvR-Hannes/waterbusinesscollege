@@ -61,7 +61,7 @@ const faqs = [
     answer: (
       <div className="px-6 py-4 bg-gray-50 text-gray-700 text-sm space-y-2">
         <p>
-          Water Business College (WBC) uses a Non-Contractual, Modular 'Pay-As-You-Learn' (MPAYL) model. This means learners are not bound by financial contracts and only pay for modules as they enroll.
+          {"Water Business College (WBC) uses a Non-Contractual, Modular 'Pay-As-You-Learn' (MPAYL) model. This means learners are not bound by financial contracts and only pay for modules as they enroll."}
         </p>
         <p>
           <strong>Cost Transparency:</strong> Tuition fees for each Knowledge and Practical Module, as well as short courses, will be published on the WBC website. No application fees are charged.
@@ -93,7 +93,7 @@ const faqs = [
         <p>
           The MPAYL system at Water Business College (WBC) is designed to provide flexibility and affordability, particularly for part-time learners and working professionals.
         </p>
-        <p><strong>Non-Contractual:</strong> Learners are not required to sign a financial contract to register for individual Knowledge (KM) or Practical (PM) modules. You only pay when you're ready to study a module.</p>
+        <p><strong>Non-Contractual:</strong> {"Learners are not required to sign a financial contract to register for individual Knowledge (KM) or Practical (PM) modules. You only pay when you're ready to study a module."}</p>
         <p><strong>Modular:</strong> Each qualification is divided into credit-bearing Knowledge and Practical modules. This modular approach makes it easier for learners to study at their own pace and balance other commitments.</p>
         <p><strong>Pay-As-You-Learn:</strong> You pay per module, per academic period. Each module has a set cost based on its credit rating. Payment grants access to the module’s content, assessments, and contact sessions.</p>
         <p><strong>Flexible Learning Environment:</strong> Each module is offered in three different periods throughout the academic year. This means learners can choose when to complete each module and potentially extend their studies beyond the standard two-year duration if needed.</p>
@@ -126,7 +126,7 @@ const faqs = [
         <ul className="list-disc list-inside ml-4">
           <li><strong>Practical 1 – Water Reticulation Systems:</strong> Requires KM01–KM05</li>
           <li><strong>Practical 2 – Operation & Maintenance:</strong> Requires KM06–KM08</li>
-          <li><strong>Practical 3 – Know your Water Reticulation System:</strong> A customised assignment based on the learner's profile</li>
+          <li><strong>Practical 3 – Know your Water Reticulation System:</strong>{"A customised assignment based on the learner's profile"}</li>
         </ul>
   
         <p><strong>Practical Training Site:</strong> WBC operates a hands-on laboratory simulating water reticulation systems as found in municipalities and private industry (e.g., mines, industrial plants). Two 2-week practical sessions are required each academic year. Watch the <a href="https://www.youtube.com/watch?v=RndYrlr6L7Q" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">YouTube video</a> to view the facility.</p>
@@ -462,7 +462,7 @@ const faqs = [
     question: "Can both the private sector and public sector institutions benefit from the occupational qualifications offered by WBC?",
     answer: (
       <div className="px-6 py-4 bg-gray-50 text-gray-700 text-sm space-y-2">
-        <p><strong>Yes.</strong> WBC's occupational qualifications are valuable to both private and public sector institutions.</p>
+        <p><strong>Yes.</strong>{"WBC's occupational qualifications are valuable to both private and public sector institutions."}</p>
         <ul className="list-disc list-inside ml-4">
           <li>
             Businesses incorporate training to build a skilled workforce that aligns with strategic objectives.

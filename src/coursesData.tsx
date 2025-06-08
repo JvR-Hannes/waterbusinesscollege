@@ -15,7 +15,7 @@ export const courses: Course[] = [
       <p>
         This qualification is designed for individuals aiming to install, operate,
         and maintain water supply infrastructure.
-        <br />It's suitable for technical staff
+        <br />It&apos;s suitable for technical staff
         seeking formal recognition of their experience and for newcomers entering
         the water sector.
       </p>
@@ -67,11 +67,11 @@ export const courses: Course[] = [
           municipal water supply systems, and on the classification and ARD/ABA
           assessment of waste materials (incl. mine wastes), etc.
         </p>
-        <p>The DIY courses are available 24/7 and are ideal for:</p> 
-        <ol className="list-decimal list-inside ml-1"> 
+        <p>The DIY courses are available 24/7 and are ideal for:</p>
+        <ol className="list-decimal list-inside ml-1">
           <li>
             <strong>Technicians, Younger practitioners</strong> and{" "}
-            <strong>Senior and post-graduate students</strong> in the water, related 
+            <strong>Senior and post-graduate students</strong> in the water, related
             engineering, environmental and science disciplines
           </li>
           <li>

@@ -7,7 +7,7 @@ const mockCourses = [
       <p>
         The focus of the online DIY course is on methodology, i.e. how to conduct a Waste Classification and an Acid Rock Drainage (ARD / ABA) Assessment of mine residue deposits / waste material.
         Target audiences: Technicians, Younger practitioners and Senior and post-graduate students in the water resources, engineering, environmental and science disciplines.
-        Case Study: Platinum Group Minerals (PGM's) in the Bushveld Igneous Complex (BIC).
+        {"Case Study: Platinum Group Minerals (PGM's) in the Bushveld Igneous Complex (BIC)."}
         <br /><br />
         The DIY courses are available 24/7 and the learner / participant can start at any time once registered!
         <br /><br />

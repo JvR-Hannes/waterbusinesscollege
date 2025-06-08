@@ -4,7 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Chatbot from '@/components/Chatbot'
 import "./globals.css";
-{/*This website was built by Hannes Jansen van Rensburg */}
+{/*This website was built by Hannes Jansen van Rensburg */ }
 
 const geistSans = Geist({
   subsets: ["latin"],
@@ -28,6 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

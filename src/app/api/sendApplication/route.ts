@@ -50,7 +50,7 @@ function getField(fields: formidable.Fields, key: string): string {
   return '';
 }
 
-export async function POST(req: Request) {
+export async function POST(req: Request): Promise<Response> {
   try {
     const incomingReq = await requestToIncomingMessage(req);
     const form = formidable({ multiples: false, keepExtensions: true });

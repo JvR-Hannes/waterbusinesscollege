@@ -54,21 +54,21 @@ function VerticalTabSections() {
             'Learners must complete all requirements for the Knowledge (KM) and Practical (PM) module within the period (per module) selected.',
             <>
               <h4 className="text-base font-semibold mb-2 text-blue-700">
-                The requirements for a Knowledge module (KM) include
+                {"The requirements for a Knowledge module (KM) include"}
               </h4>
               <ul className="list-disc list-inside space-y-1">
-                <li>Attendance of the contact sessions with the facilitator.</li>
-                <li>Consultation of the prescribed reading material.</li>
-                <li>Completion of the informal and formal tests, etc.</li>
+                <li>{"Attendance of the contact sessions with the facilitator."}</li>
+                <li>{"Consultation of the prescribed reading material."}</li>
+                <li>{"Completion of the informal and formal tests, etc."}</li>
               </ul>
               <h4 className="text-base font-semibold mb-2 text-blue-700">
-                The requirements for a Practical module (PM) include
+                {"The requirements for a Practical module (PM) include"}
               </h4>
               <ul className="list-disc list-inside space-y-1">
-                <li>Complete tasks in preparation for the 2 week full-time practical sessions.</li>
-                <li>In-person attendance of the 2 week blocks.</li>
-                <li>Completion of daily practical tasks.</li>
-                <li>Comprehensive report on the practical sessions, etc.</li>
+                <li>{"Complete tasks in preparation for the 2 week full-time practical sessions."}</li>
+                <li>{"In-person attendance of the 2 week blocks."}</li>
+                <li>{"Completion of daily practical tasks."}</li>
+                <li>{"Comprehensive report on the practical sessions, etc."}</li>
               </ul>
             </>,
             'Please Note: A Certificate will be issued on completion of the Knowledge (KM) and Practical (PM) modules.',
@@ -126,9 +126,9 @@ function VerticalTabSections() {
                 Learners must complete three (3) practical sessions. The pre-requisites to gain entry to the practical sessions are as follows:
               </h4>
               <ul className="list-disc list-inside space-y-1">
-                <li>On-Site Practical 1 - Water Reticulation Systems: Learners must complete Knowledge Modules 1 to 5 (i.e. KM01 to KM05).</li>
-                <li>On-Site Practical 2 - Operation & Maintenance: Learners must complete Knowledge Modules 6 to 8 (i.e. KM06 to KM08).</li>
-                <li>Practical 3 - Know your Water Reticulation System: Assignment developed by WBC specific to the learner’s profile. Learners must successfully complete On-Site Practical 1 and On-Site Practical 2.</li>
+                <li>{"On-Site Practical 1 - Water Reticulation Systems: Learners must complete Knowledge Modules 1 to 5 (i.e. KM01 to KM05)."}</li>
+                <li>{"On-Site Practical 2 - Operation & Maintenance: Learners must complete Knowledge Modules 6 to 8 (i.e. KM06 to KM08)."}</li>
+                <li>{"Practical 3 - Know your Water Reticulation System: Assignment developed by WBC specific to the learner’s profile. Learners must successfully complete On-Site Practical 1 and On-Site Practical 2."}</li>
               </ul>
             </>
           ]),
@@ -139,7 +139,7 @@ function VerticalTabSections() {
             'WBC developed / built a ‘hands-on’ / practical laboratory (i.e. a prototype water reticulation system) to simulate',
             '(for training purposes) the water reticulation processes / systems of water service providers (i.e. municipalities)',
             'and private industry (eg. mines, industrial plants, etc).',
-            <br />,
+            <br key="lab-break"/>,
             'Learners are required to attend two, 2 week practical sessions (4 weeks in total during the academic year) for ',
             'in-person, hands-on training at our practical site. Please see a video of our practical site by accessing the following ',
             'YouTube link: Click Here!',
@@ -173,9 +173,9 @@ function VerticalTabSections() {
                 The pre-requisites to gain entry to the examinations are as follows:
               </h4>
               <ul className="list-disc list-inside space-y-1">
-                <li>Examination Paper 1 – Learners must complete Knowledge Modules 1 to 4.</li>
-                <li>Examination Paper 2 – Learners must complete Knowledge Modules 5 to 6.</li>
-                <li>Examination Paper 3 – Learners must complete Knowledge Modules 7 to 8.</li>
+                <li>{"Examination Paper 1 – Learners must complete Knowledge Modules 1 to 4."}</li>
+                <li>{"Examination Paper 2 – Learners must complete Knowledge Modules 5 to 6."}</li>
+                <li>{"Examination Paper 3 – Learners must complete Knowledge Modules 7 to 8."}</li>
               </ul>
             </>,
           ]),
@@ -188,9 +188,9 @@ function VerticalTabSections() {
                 The pre-requisites to gain entry to the re-examinations are as follows:
               </h4>
               <ul className="list-disc list-inside space-y-1">
-                <li>Re-Examination Paper 1 – Mark between 45% to 50% for Examination Paper 1.</li>
-                <li>Re-Examination Paper 2 – Mark between 45% to 50% for Examination Paper 2.</li>
-                <li>Re-Examination Paper 3 – Mark between 45% to 50% for Examination Paper 3.</li>
+                <li>{"Re-Examination Paper 1 – Mark between 45% to 50% for Examination Paper 1."}</li>
+                <li>{"Re-Examination Paper 2 – Mark between 45% to 50% for Examination Paper 2."}</li>
+                <li>{"Re-Examination Paper 3 – Mark between 45% to 50% for Examination Paper 3."}</li>
               </ul>
             </>,
           ]),
@@ -221,8 +221,8 @@ function VerticalTabSections() {
                 Informal  and Formal Assessment
               </h4>
               <ul className="list-disc list-inside space-y-1">
-                <li>Informal and formal online tests are set for each Knowledge module (KM).</li>
-                <li>The informal and formal online tests form part of the requirements to successfully complete a Knowledge module (KM).</li>
+                <li>{"Informal and formal online tests are set for each Knowledge module (KM)."}</li>
+                <li>{"The informal and formal online tests form part of the requirements to successfully complete a Knowledge module (KM)."}</li>
               </ul>
             </>,
           ]),
@@ -237,7 +237,7 @@ function VerticalTabSections() {
           content: ([
             <>
               <h4 className="text-base font-semibold mb-2 text-blue-700">
-                The requirements for 2 week Practical modules (PM) include;
+                {"The requirements for 2 week Practical modules (PM) include;"}
               </h4>
               <ul className="list-disc list-inside space-y-1">
                 <li>Complete pre-practical assignments / tasks in preparation for the 2 week, full-time practical sessions.</li>
@@ -303,7 +303,7 @@ function VerticalTabSections() {
             'modules as well as the examinations for year 1 and the workplace skills modules for year 2.',
             'Interested practitioners / technical staff (not interested in a qualification) can register for individual knowledge',
             'modules as well as practical modules and on completion receive a ‘Certificate of Completion’ for the particular ',
-            'module completed.',<br />,
+            'module completed.',<br key="lab-break"/>,
             'Interested learners and practitioners must familiarise themselves with information on, and the structure of, the 2',
             'year occupational qualifications on the Water Business College (WBC) website.',
           ],
@@ -388,264 +388,6 @@ export default function QualificationRules() {
 
         <VerticalTabSections />
 
-        {/*{/* LMS Block: Styled Like Elementor Tabs Section */}
-        {/*<section className="bg-white border border-gray-200 rounded-md mb-10 p-6 shadow-sm">
-          <h4 className="text-xl font-bold text-blue-900 uppercase mb-4 text-center">
-            NON-CONTRACTUAL, MODULAR ‘PAY-AS-YOU-LEARN’ (MPAYL) SYSTEM
-          </h4>*/}
-
-        {/* Simulated Tabs Layout */}
-        {/*<div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            {/* Vertical Tabs (as buttons or labels) 
-            <div className="space-y-2 text-sm font-medium text-blue-700">
-              <div className="bg-blue-100 px-4 py-2 rounded-md border border-blue-300 shadow-sm">Non-Contractual</div>
-              <div className="bg-blue-100 px-4 py-2 rounded-md border border-blue-300 shadow-sm">Modular</div>
-              <div className="bg-blue-100 px-4 py-2 rounded-md border border-blue-300 shadow-sm">Pay-As-You-Learn</div>
-              <div className="bg-blue-100 px-4 py-2 rounded-md border border-blue-300 shadow-sm">Flexible Learning</div>
-              <div className="bg-blue-100 px-4 py-2 rounded-md border border-blue-300 shadow-sm">Affordable Learning</div>
-            </div>*/}
-
-        {/* Tab Content (combined into one block here for simplicity) */}
-        {/*<div className="md:col-span-3 text-sm text-gray-800 space-y-4">
-              <p>
-                Water Business College (WBC) <a href="https://waterbusinesscollege.co.za/" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">
-                  (https://www.waterbusinesscollege.co.za/)
-                </a> is introducing a Non-Contractual, Modular ‘Pay-As-You-Learn’ (MPAYL) system.
-              </p>
-              <p>
-                This system allows learners to register and pay for modules independently, with no binding financial agreement. It’s structured into Knowledge (KM) and Practical (PM) modules, allowing for flexibility and affordability.
-              </p>
-              <p>
-                Learners may attend any period offered and can complete the qualification at their own pace — full-time or part-time.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/*<section className="mb-10">
-          <h2 className="text-2xl font-semibold text-blue-800 mb-4">MPAYL: Modular Pay-As-You-Learn System</h2>
-          <div className="overflow-x-auto rounded-lg border border-gray-300">
-            <table className="min-w-full table-auto text-left text-sm text-gray-700">
-              <thead className="bg-blue-100 text-blue-900 uppercase tracking-wide">
-                <tr>
-                  <th className="px-4 py-3">Feature</th>
-                  <th className="px-4 py-3">Details</th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Non-Contractual</td>
-                  <td className="px-4 py-3">No financial contract is required to register for individual modules.</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Modular</td>
-                  <td className="px-4 py-3">Divided into credit-bearing Knowledge (KM) and Practical (PM) modules. Designed for flexibility and affordability.</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Pay-As-You-Learn</td>
-                  <td className="px-4 py-3">Pay per module, per period, based on credit allocation.</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Flexible Learning</td>
-                  <td className="px-4 py-3">Choose one of 3 offered periods per module. Complete the program at your own pace, full-time or part-time.</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Affordable Learning</td>
-                  <td className="px-4 py-3">Only pay for what you register. Materials are identical across periods.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>*/}
-
-        {/* Module Completion with Table */}
-        {/*<section className="mb-10">
-          <h2 className="text-2xl font-semibold text-blue-800 mb-4">Module Completion</h2>
-          <p className="mb-4">Learners must complete all requirements for each selected Knowledge (KM) and Practical (PM) module within the chosen period.</p>
-
-          <div className="overflow-x-auto rounded-lg border border-gray-300 mb-6">
-            <table className="min-w-full table-auto text-left text-sm text-gray-700">
-              <thead className="bg-blue-100 text-blue-900 uppercase tracking-wide">
-                <tr>
-                  <th className="px-4 py-3">Module Type</th>
-                  <th className="px-4 py-3">Description</th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Knowledge Module (KM)</td>
-                  <td className="px-4 py-3">
-                    <ul className="list-disc ml-5 space-y-1">
-                      <li>Attend contact sessions with facilitator</li>
-                      <li>Consult prescribed reading material</li>
-                      <li>Complete informal and formal tests</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Practical Module (PM)</td>
-                  <td className="px-4 py-3">
-                    <ul className="list-disc ml-5 space-y-1">
-                      <li>Pre-practical assignments/tasks</li>
-                      <li>Attend 2-week in-person sessions</li>
-                      <li>Complete daily tasks & final report</li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* RPL */}
-        {/*<section className="mb-10">
-          <h2 className="text-2xl font-semibold text-blue-800 mb-4">Recognition of Prior Learning (RPL)</h2>
-          <p>Water Business College adheres to national requirements for RPL. A certificate is issued upon completion of both KM and PM modules.</p>
-        </section>
-
-        {/* Hybrid Strategy */}
-        {/*<section className="mb-10">
-          <h2 className="text-2xl font-semibold text-blue-800 mb-4">Delivering the Occupational Qualification</h2>
-
-          <h3 className="font-semibold text-blue-700">Hybrid Learning Strategy</h3>
-          <p className="mb-4">Combines online learning for Knowledge Modules with in-person sessions for Practical Modules.</p>
-
-          <h3 className="font-semibold text-blue-700">Knowledge Modules (KM)</h3>
-          <p className="mb-4">Offered in two 2-hour online sessions weekly. A minimum number of learners is required for module delivery.</p>
-
-          <h3 className="font-semibold text-blue-700">KM Assessment</h3>
-          <p className="mb-4">Includes assignments and online tests. Completion of all assessments is required to earn the module certificate.</p>
-
-          <h3 className="font-semibold text-blue-700">Practical Modules (PM)</h3>
-          <p className="mb-4">Offered in-person with a mandatory two 2-week attendance. Includes 1-week prep and 2-week report writing.</p>
-
-          <h3 className="font-semibold text-blue-700">Practical Site / Laboratory</h3>
-          <p className="mb-4">Includes a prototype water reticulation system. Currently being relocated and rebuilt for future sessions.</p>
-        </section>
-
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-blue-800 mb-4">Examinations & Assessments</h2>
-          <div className="overflow-x-auto rounded-lg border border-gray-300">
-            <table className="min-w-full table-auto text-left text-sm text-gray-700">
-              <thead className="bg-blue-100 text-blue-900 uppercase tracking-wide">
-                <tr>
-                  <th className="px-4 py-3">Assessment Type</th>
-                  <th className="px-4 py-3">Pre-requisites & Notes</th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Examination Paper 1</td>
-                  <td className="px-4 py-3">Requires KM01–KM04</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Examination Paper 2</td>
-                  <td className="px-4 py-3">Requires KM05–KM06</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Examination Paper 3</td>
-                  <td className="px-4 py-3">Requires KM07–KM08</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Re-Examinations</td>
-                  <td className="px-4 py-3">Allowed for scores between 45–49% for the respective paper</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Summative Exam 1</td>
-                  <td className="px-4 py-3">Failing Re-Exam 1/2, having completed KM01–KM05</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Summative Exam 2</td>
-                  <td className="px-4 py-3">Failing Re-Exam 3, having completed KM06–KM08</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Informal & Formal Tests</td>
-                  <td className="px-4 py-3">Completed per module and required for KM completion</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-blue-800 mb-4">Practical Assessment Requirements</h2>
-          <ul className="list-disc list-inside space-y-2 text-sm text-gray-800 bg-white p-4 rounded-md border border-gray-200">
-            <li>Complete pre-practical assignments before the 2-week session.</li>
-            <li>Attend all 2 weeks of in-person training.</li>
-            <li>Complete daily practical scenarios and tasks.</li>
-            <li>Undergo written and verbal assessments during the session.</li>
-            <li>Submit a comprehensive practical report post-session.</li>
-          </ul>
-        </section>
-
-        <section className="mb-10">
-          <h2 className="text-2xl font-semibold text-blue-800 mb-4">Registration & Payment Process</h2>
-          <div className="overflow-x-auto rounded-lg border border-gray-300">
-            <table className="min-w-full table-auto text-left text-sm text-gray-700">
-              <thead className="bg-blue-100 text-blue-900 uppercase tracking-wide">
-                <tr>
-                  <th className="px-4 py-3">Step</th>
-                  <th className="px-4 py-3">Details</th>
-                </tr>
-              </thead>
-              <tbody className="bg-white divide-y divide-gray-200">
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Application</td>
-                  <td className="px-4 py-3">Complete application form. Upload certified ID and academic records.</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">KM Registration</td>
-                  <td className="px-4 py-3">Register and pay per selected period. Offered 3 times/year.</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">PM Registration</td>
-                  <td className="px-4 py-3">Register and pay per selected period. Offered 3 times/year.</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Examination Registration</td>
-                  <td className="px-4 py-3">Select and pay per examination date. All exams are in-person.</td>
-                </tr>
-                <tr>
-                  <td className="px-4 py-3 font-medium text-blue-700">Important Note</td>
-                  <td className="px-4 py-3">Check pre-requisites before registering for any module or assessment.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Registration & Payment */}
-        {/*<section className="mb-10">
-          <h2 className="text-2xl font-semibold text-blue-800 mb-4">Registration & Payment Procedures</h2>
-          <ul className="list-disc list-inside space-y-2">
-            <li>Apply with certified ID and academic records</li>
-            <li>Register and pay per KM and PM module period</li>
-            <li>Register and pay per exam attempt</li>
-            <li>Carefully review prerequisites before enrolling</li>
-          </ul>
-        </section>
-
-        {/* Occupational Qualification */}
-        {/*<section className="mb-10">
-          <h2 className="text-2xl font-semibold text-blue-800 mb-4">Occupational Qualification Completion</h2>
-          <div className="bg-white border border-gray-200 rounded-md p-4 text-sm text-gray-800 space-y-3">
-            <p>
-              Learners will be awarded the full 2-year occupational qualification upon successful completion of:
-            </p>
-            <ul className="list-disc list-inside space-y-1">
-              <li>All Knowledge Modules (KM)</li>
-              <li>All Practical Modules (PM)</li>
-              <li>All Year 1 Examinations</li>
-              <li>Year 2: Workplace Skills Modules</li>
-            </ul>
-            <p>
-              Practitioners not pursuing the full qualification may register for specific KM or PM modules and receive a <strong>Certificate of Completion</strong> per module.
-            </p>
-            <p>
-              More information on the 2-year qualification structure is available on the WBC website.
-            </p>
-          </div>
-        </section>*/}
       </main>
     </>
   );

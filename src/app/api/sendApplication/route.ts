@@ -7,14 +7,12 @@ import { Readable } from "stream";
 import crypto from "crypto";
 import { saveToken } from "@/lib/tokenStore";
 
-// Disable Next.js default body parsing
 export const config = {
   api: {
     bodyParser: false,
   },
 };
 
-// Helper: Convert Web `Request` to Node.js `IncomingMessage`
 async function requestToIncomingMessage(req: Request): Promise<IncomingMessage> {
   const readable = Readable.fromWeb(req.body as any) as unknown as IncomingMessage;
   readable.headers = Object.fromEntries(req.headers.entries());
@@ -23,7 +21,6 @@ async function requestToIncomingMessage(req: Request): Promise<IncomingMessage> 
   return readable;
 }
 
-// Helper: Normalize form fields
 function getField(fields: formidable.Fields, key: string): string {
   const value = fields[key as keyof typeof fields];
   if (Array.isArray(value)) return value[0] ?? '';
@@ -34,7 +31,6 @@ function getField(fields: formidable.Fields, key: string): string {
 export async function POST(req: Request) {
   try {
     const incomingReq = await requestToIncomingMessage(req);
-
     const form = formidable({ multiples: false, keepExtensions: true });
 
     return await new Promise((resolve) => {
@@ -51,7 +47,6 @@ export async function POST(req: Request) {
         const course = getField(fields, 'course');
         const additionalInfo = getField(fields, 'additionalInfo');
 
-        // Handle file safely
         let file: formidable.File | undefined;
         const uploaded = files.file;
         if (Array.isArray(uploaded)) {
@@ -94,14 +89,14 @@ Additional Info: ${additionalInfo || "N/A"}
 --- Admin Actions ---
 Approve: ${approveLink}
 Decline: ${declineLink}
-  `,
+          `,
           attachments: file
             ? [
-              {
-                filename: file.originalFilename || "document",
-                content: fs.createReadStream(file.filepath),
-              },
-            ]
+                {
+                  filename: file.originalFilename || "document",
+                  content: fs.createReadStream(file.filepath),
+                },
+              ]
             : [],
         };
 
@@ -109,13 +104,21 @@ Decline: ${declineLink}
           await transporter.sendMail(mailOptions);
           return resolve(NextResponse.json({ success: true }));
         } catch (error) {
-          console.error("Error sending email:", error);
+          if (error instanceof Error) {
+            console.error("Error sending email:", error.message);
+          } else {
+            console.error("Unknown error sending email:", error);
+          }
           return resolve(NextResponse.json({ error: "Failed to send email" }, { status: 500 }));
         }
       });
     });
   } catch (err) {
-    console.error("Unhandled error:", err);
+    if (err instanceof Error) {
+      console.error("Unhandled error:", err.message);
+    } else {
+      console.error("Unknown server error:", err);
+    }
     return NextResponse.json({ error: "Unexpected server error" }, { status: 500 });
   }
 }

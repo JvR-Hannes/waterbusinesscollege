@@ -1,8 +1,17 @@
+"use client";
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+
 export default function DashboardPage() {
-    return (
-      <main className="py-16 px-4">
-        <h1 className="text-3xl font-bold mb-4">Dashboard</h1>
-        <p>This is the dashboard page.</p>
-      </main>
-    );
-  }
+  const router = useRouter();
+
+  useEffect(() => {
+    window.location.href = "https://waterbusinesscollege.co.za/dashboard/";
+  }, []);
+
+  return (
+    <main className="py-16 px-4">
+      <p>Redirecting to your dashboard...</p>
+    </main>
+  );
+}

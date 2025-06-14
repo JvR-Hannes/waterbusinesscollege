@@ -78,10 +78,12 @@ export async function POST(req: Request): Promise<Response> {
         }
 
         const transporter = nodemailer.createTransport({
-          service: "gmail",
+          host: process.env.SMTP_HOST,
+          port: Number(process.env.SMTP_PORT) || 465,
+          secure: true, // true for port 465
           auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS,
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASS,
           },
         });
 
@@ -99,8 +101,8 @@ export async function POST(req: Request): Promise<Response> {
         console.log(`Saved token for ${email}: ${token}`);
 
         const mailOptions = {
-          from: `"Application Form" <${process.env.EMAIL_USER}>`,
-          to: "admin@yourdomain.com",
+          from: `"Application Form" <${process.env.SMTP_FROM || process.env.SMTP_USER}>`,
+          to: "students@waterbusinesscollege.co.za",
           subject: `New Application from ${fullName}`,
           text: `
 Name: ${fullName}

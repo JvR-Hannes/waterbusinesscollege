@@ -1,8 +1,5 @@
+import { redirect } from 'next/navigation';
+
 export default function CartPage() {
-    return (
-      <main className="py-16 px-4">
-        <h1 className="text-3xl font-bold mb-4">Cart</h1>
-        <p>Your selected courses.</p>
-      </main>
-    );
-  }
+  redirect('https://portal.waterbusinesscollege.co.za/cart/');
+}

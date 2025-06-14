@@ -1,14 +1,6 @@
-"use client";
-import { useEffect } from "react";
+// app/dashboard/page.tsx
+import { redirect } from "next/navigation";
 
 export default function DashboardPage() {
-  useEffect(() => {
-    window.location.replace("https://portal.waterbusinesscollege.co.za/dashboard/");
-  }, []);
-
-  return (
-    <main className="py-16 px-4">
-      <p>Redirecting to your dashboard...</p>
-    </main>
-  );
+  redirect("https://portal.waterbusinesscollege.co.za/dashboard/");
 }

@@ -147,4 +147,25 @@ Decline: ${declineLink}
     }
     return NextResponse.json({ error: "Unexpected server error" }, { status: 500 });
   }
+
+  async function testSMTP() {
+    const transporter = nodemailer.createTransport({
+      host: process.env.SMTP_HOST,
+      port: Number(process.env.SMTP_PORT),
+      secure: true,
+      auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+      },
+    });
+
+    try {
+      let info = await transporter.verify();
+      console.log('SMTP connection successful:', info);
+    } catch (err) {
+      console.error('SMTP connection error:', err);
+    }
+  }
+
+  testSMTP();
 }

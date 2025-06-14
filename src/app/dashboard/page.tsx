@@ -6,7 +6,7 @@ export default function DashboardPage() {
   const router = useRouter();
 
   useEffect(() => {
-    window.location.href = "https://waterbusinesscollege.co.za/dashboard/";
+    window.location.href = "https://portal.waterbusinesscollege.co.za/dashboard/";
   }, []);
 
   return (

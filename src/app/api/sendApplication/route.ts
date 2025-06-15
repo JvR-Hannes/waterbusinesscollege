@@ -57,6 +57,7 @@ function getField(fields: formidable.Fields, key: string): string {
 
 export async function OPTIONS(): Promise<NextResponse> {
   // CORS preflight response
+  console.log("OPTIONS /api/sendApplication called - returning CORS headers");
   return new NextResponse(null, {
     status: 200,
     headers: CORS_HEADERS,
@@ -64,8 +65,11 @@ export async function OPTIONS(): Promise<NextResponse> {
 }
 
 export async function POST(req: Request): Promise<NextResponse> {
+  console.log("POST /api/sendApplication called");
   try {
     const incomingReq = await requestToIncomingMessage(req);
+    console.log("Converted request to IncomingMessage, starting form parse");
+
     const form = formidable({ multiples: false, keepExtensions: true });
 
     return await new Promise((resolve) => {
@@ -81,12 +85,23 @@ export async function POST(req: Request): Promise<NextResponse> {
           }));
         }
 
+        console.log("Form parsed successfully", { fields, files });
+
         const fullName = getField(fields, 'fullName');
         const idNumber = getField(fields, 'idNumber');
         const contactNumber = getField(fields, 'contactNumber');
         const email = getField(fields, 'email');
         const course = getField(fields, 'course');
         const additionalInfo = getField(fields, 'additionalInfo');
+
+        console.log("Parsed fields:", {
+          fullName,
+          idNumber,
+          contactNumber,
+          email,
+          course,
+          additionalInfo,
+        });
 
         let file: formidable.File | undefined;
         const uploaded = files.file;
@@ -95,7 +110,9 @@ export async function POST(req: Request): Promise<NextResponse> {
         } else if (uploaded) {
           file = uploaded;
         }
+        console.log("File attached:", file ? file.originalFilename : "No file");
 
+        console.log("Creating SMTP transporter with host:", process.env.SMTP_HOST);
         const transporter = nodemailer.createTransport({
           host: process.env.SMTP_HOST,
           port: Number(process.env.SMTP_PORT) || 465,
@@ -147,6 +164,13 @@ Decline: ${declineLink}
             : [],
         };
 
+        console.log("Sending email with options:", {
+          from: mailOptions.from,
+          to: mailOptions.to,
+          subject: mailOptions.subject,
+          attachments: file ? true : false,
+        });
+
         try {
           await transporter.verify();
           console.log("SMTP connection verified successfully.");
@@ -183,7 +207,7 @@ Decline: ${declineLink}
       });
     });
   } catch (err) {
-    console.error("Unhandled error:", err);
+    console.error("Unhandled error in POST /api/sendApplication:", err);
     return new NextResponse(JSON.stringify({ error: "Unexpected server error" }), {
       status: 500,
       headers: {

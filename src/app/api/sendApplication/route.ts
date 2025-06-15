@@ -55,15 +55,15 @@ function getField(fields: formidable.Fields, key: string): string {
   return '';
 }
 
-export async function OPTIONS(): Promise<Response> {
+export async function OPTIONS(): Promise<NextResponse> {
   // CORS preflight response
-  return new Response(null, {
+  return new NextResponse(null, {
     status: 200,
     headers: CORS_HEADERS,
   });
 }
 
-export async function POST(req: Request): Promise<Response> {
+export async function POST(req: Request): Promise<NextResponse> {
   try {
     const incomingReq = await requestToIncomingMessage(req);
     const form = formidable({ multiples: false, keepExtensions: true });
@@ -72,7 +72,7 @@ export async function POST(req: Request): Promise<Response> {
       form.parse(incomingReq, async (err, fields, files) => {
         if (err) {
           console.error("Formidable parse error:", err);
-          return resolve(new Response(JSON.stringify({ error: "Form parsing failed" }), {
+          return resolve(new NextResponse(JSON.stringify({ error: "Form parsing failed" }), {
             status: 500,
             headers: {
               'Content-Type': 'application/json',
@@ -157,7 +157,7 @@ Decline: ${declineLink}
         try {
           const info = await transporter.sendMail(mailOptions);
           console.log("Email sent successfully:", info);
-          return resolve(new Response(JSON.stringify({ success: true }), {
+          return resolve(new NextResponse(JSON.stringify({ success: true }), {
             status: 200,
             headers: {
               'Content-Type': 'application/json',
@@ -172,7 +172,7 @@ Decline: ${declineLink}
           } else {
             console.error("Unknown error type:", error);
           }
-          return resolve(new Response(JSON.stringify({ error: "Failed to send email" }), {
+          return resolve(new NextResponse(JSON.stringify({ error: "Failed to send email" }), {
             status: 500,
             headers: {
               'Content-Type': 'application/json',
@@ -184,7 +184,7 @@ Decline: ${declineLink}
     });
   } catch (err) {
     console.error("Unhandled error:", err);
-    return new Response(JSON.stringify({ error: "Unexpected server error" }), {
+    return new NextResponse(JSON.stringify({ error: "Unexpected server error" }), {
       status: 500,
       headers: {
         'Content-Type': 'application/json',

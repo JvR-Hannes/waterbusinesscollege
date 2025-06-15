@@ -85,6 +85,8 @@ export async function POST(req: Request): Promise<Response> {
             user: process.env.SMTP_USER,
             pass: process.env.SMTP_PASS,
           },
+          logger: true,   // Logs to console
+          debug: true,    // Include SMTP traffic
         });
 
         const token = crypto.randomUUID();
@@ -127,13 +129,23 @@ Decline: ${declineLink}
         };
 
         try {
-          await transporter.sendMail(mailOptions);
+          await transporter.verify();
+          console.log("SMTP connection verified successfully.");
+        } catch (verifyError) {
+          console.error("SMTP verification failed:", verifyError);
+        }
+
+        try {
+          const info = await transporter.sendMail(mailOptions);
+          console.log("Email sent successfully:", info);
           return resolve(NextResponse.json({ success: true }));
         } catch (error) {
+          console.error("Failed to send email.");
           if (error instanceof Error) {
-            console.error("Error sending email:", error.message);
+            console.error("Error message:", error.message);
+            console.error("Full error:", error);
           } else {
-            console.error("Unknown error sending email:", error);
+            console.error("Unknown error type:", error);
           }
           return resolve(NextResponse.json({ error: "Failed to send email" }, { status: 500 }));
         }
@@ -147,5 +159,5 @@ Decline: ${declineLink}
     }
     return NextResponse.json({ error: "Unexpected server error" }, { status: 500 });
   }
-  
+
 }

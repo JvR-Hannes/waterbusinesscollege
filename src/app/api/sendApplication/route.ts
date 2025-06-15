@@ -14,6 +14,12 @@ export const config = {
   },
 };
 
+const CORS_HEADERS = {
+  'Access-Control-Allow-Origin': 'https://waterbusinesscollege.co.za',
+  'Access-Control-Allow-Methods': 'POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
+
 async function requestToIncomingMessage(req: Request): Promise<IncomingMessage> {
   const reader = req.body?.getReader();
   const stream = new Readable({
@@ -22,7 +28,6 @@ async function requestToIncomingMessage(req: Request): Promise<IncomingMessage> 
         this.push(null);
         return;
       }
-
       try {
         const { done, value } = await reader.read();
         if (done) {
@@ -50,6 +55,14 @@ function getField(fields: formidable.Fields, key: string): string {
   return '';
 }
 
+export async function OPTIONS(): Promise<Response> {
+  // CORS preflight response
+  return new Response(null, {
+    status: 200,
+    headers: CORS_HEADERS,
+  });
+}
+
 export async function POST(req: Request): Promise<Response> {
   try {
     const incomingReq = await requestToIncomingMessage(req);
@@ -59,7 +72,13 @@ export async function POST(req: Request): Promise<Response> {
       form.parse(incomingReq, async (err, fields, files) => {
         if (err) {
           console.error("Formidable parse error:", err);
-          return resolve(NextResponse.json({ error: "Form parsing failed" }, { status: 500 }));
+          return resolve(new Response(JSON.stringify({ error: "Form parsing failed" }), {
+            status: 500,
+            headers: {
+              'Content-Type': 'application/json',
+              ...CORS_HEADERS,
+            },
+          }));
         }
 
         const fullName = getField(fields, 'fullName');
@@ -80,13 +99,13 @@ export async function POST(req: Request): Promise<Response> {
         const transporter = nodemailer.createTransport({
           host: process.env.SMTP_HOST,
           port: Number(process.env.SMTP_PORT) || 465,
-          secure: true, // true for port 465
+          secure: true,
           auth: {
             user: process.env.SMTP_USER,
             pass: process.env.SMTP_PASS,
           },
-          logger: true,   // Logs to console
-          debug: true,    // Include SMTP traffic
+          logger: true,
+          debug: true,
         });
 
         const token = crypto.randomUUID();
@@ -120,11 +139,11 @@ Decline: ${declineLink}
           `,
           attachments: file
             ? [
-              {
-                filename: file.originalFilename || "document",
-                content: fs.createReadStream(file.filepath),
-              },
-            ]
+                {
+                  filename: file.originalFilename || "document",
+                  content: fs.createReadStream(file.filepath),
+                },
+              ]
             : [],
         };
 
@@ -138,7 +157,13 @@ Decline: ${declineLink}
         try {
           const info = await transporter.sendMail(mailOptions);
           console.log("Email sent successfully:", info);
-          return resolve(NextResponse.json({ success: true }));
+          return resolve(new Response(JSON.stringify({ success: true }), {
+            status: 200,
+            headers: {
+              'Content-Type': 'application/json',
+              ...CORS_HEADERS,
+            },
+          }));
         } catch (error) {
           console.error("Failed to send email.");
           if (error instanceof Error) {
@@ -147,17 +172,24 @@ Decline: ${declineLink}
           } else {
             console.error("Unknown error type:", error);
           }
-          return resolve(NextResponse.json({ error: "Failed to send email" }, { status: 500 }));
+          return resolve(new Response(JSON.stringify({ error: "Failed to send email" }), {
+            status: 500,
+            headers: {
+              'Content-Type': 'application/json',
+              ...CORS_HEADERS,
+            },
+          }));
         }
       });
     });
   } catch (err) {
-    if (err instanceof Error) {
-      console.error("Unhandled error:", err.message);
-    } else {
-      console.error("Unknown server error:", err);
-    }
-    return NextResponse.json({ error: "Unexpected server error" }, { status: 500 });
+    console.error("Unhandled error:", err);
+    return new Response(JSON.stringify({ error: "Unexpected server error" }), {
+      status: 500,
+      headers: {
+        'Content-Type': 'application/json',
+        ...CORS_HEADERS,
+      },
+    });
   }
-
 }

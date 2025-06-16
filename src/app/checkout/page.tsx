@@ -1,15 +1,12 @@
 // app/checkout/page.tsx
 "use client";
-import { useEffect } from "react";
+import RedirectWithSpinner from "@/components/RedirectWithSpinner";
 
 export default function CheckoutPage() {
-  useEffect(() => {
-    window.open("https://portal.waterbusinesscollege.co.za/checkout/", "_blank");
-  }, []);
-
   return (
-    <main className="flex items-center justify-center h-screen">
-      <p>Redirecting to checkout...</p>
-    </main>
+    <RedirectWithSpinner
+      url="https://portal.waterbusinesscollege.co.za/checkout/"
+      newTab={true}
+    />
   );
 }

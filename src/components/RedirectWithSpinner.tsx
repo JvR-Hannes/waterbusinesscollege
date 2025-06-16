@@ -24,7 +24,7 @@ export default function RedirectWithSpinner({
   }, [url, newTab]);
 
   return (
-    <div className="flex h-screen items-center justify-center bg-black">
+    <div className="flex h-screen items-center justify-center bg-white">
       <div className="flex flex-col items-center space-y-4">
         <Image
           src="/images/wbc-main.png" 

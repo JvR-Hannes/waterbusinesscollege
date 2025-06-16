@@ -27,7 +27,7 @@ export default function RedirectWithSpinner({
     <div className="flex h-screen items-center justify-center bg-black">
       <div className="flex flex-col items-center space-y-4">
         <Image
-          src="/wbc-main.png" 
+          src="/images/wbc-main.png" 
           alt="Redirecting"
           width={100}
           height={100}

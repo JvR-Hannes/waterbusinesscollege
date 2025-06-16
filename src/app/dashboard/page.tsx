@@ -1,6 +1,10 @@
-// app/dashboard/page.tsx
-import { redirect } from "next/navigation";
+import RedirectWithSpinner from "@/components/RedirectWithSpinner";
 
 export default function DashboardPage() {
-  redirect("https://portal.waterbusinesscollege.co.za/dashboard/");
+  return (
+    <RedirectWithSpinner
+      url="https://portal.waterbusinesscollege.co.za/dashboard/"
+      newTab={true}
+    />
+  );
 }

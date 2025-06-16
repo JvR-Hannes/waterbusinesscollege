@@ -1,5 +1,11 @@
-import { redirect } from 'next/navigation';
+// app/cart/page.tsx
+import RedirectWithSpinner from "@/components/RedirectWithSpinner";
 
 export default function CartPage() {
-  redirect('https://portal.waterbusinesscollege.co.za/cart/');
+  return (
+    <RedirectWithSpinner
+      url="https://portal.waterbusinesscollege.co.za/cart/"
+      newTab={true}
+    />
+  );
 }

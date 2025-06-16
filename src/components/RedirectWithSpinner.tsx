@@ -1,6 +1,8 @@
+// components/RedirectWithSpinner.tsx
 "use client";
 
 import { useEffect } from "react";
+import Image from "next/image";
 
 export default function RedirectWithSpinner({
   url,
@@ -16,16 +18,22 @@ export default function RedirectWithSpinner({
       } else {
         window.location.href = url;
       }
-    }, 1500); // 1.5s delay
+    }, 1500);
 
     return () => clearTimeout(timeout);
   }, [url, newTab]);
 
   return (
-    <div className="flex h-screen items-center justify-center bg-white">
+    <div className="flex h-screen items-center justify-center bg-black">
       <div className="flex flex-col items-center space-y-4">
-        <div className="w-12 h-12 border-4 border-blue-500 border-t-transparent rounded-full animate-spin" />
-        <p className="text-gray-700">Redirecting you...</p>
+        <Image
+          src="/wbc-main.png" 
+          alt="Redirecting"
+          width={100}
+          height={100}
+          className="animate-neon-pulse"
+        />
+        <p className="text-white text-sm animate-fade-in">Redirecting you...</p>
       </div>
     </div>
   );

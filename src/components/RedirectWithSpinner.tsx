@@ -45,7 +45,7 @@ export default function RedirectWithSpinner({
         <p className="text-white text-sm animate-fade-in">Redirecting you...</p>
         {newTab && (
           <p className="text-white text-xs opacity-70 animate-fade-in delay-500">
-            You'll return to the homepage shortly.
+            You&apos;ll return to the homepage shortly.
           </p>
         )}
       </div>

@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
   try {
     await sendMail({
       subject: 'New Module 6 Interest Submission',
-      to: 'admin@yourdomain.com',
+      to: 'applications@waterbusinesscollage.co.za',
       html: `
         <h2>Module 6 Interest Submitted</h2>
         <p><strong>Name:</strong> ${name}</p>

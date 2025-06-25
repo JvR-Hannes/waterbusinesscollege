@@ -23,6 +23,12 @@ export default function RPLPolicyPage() {
         >
           ← Back to Home
         </Link>
+        <Link
+          href="/rpl-application"
+          className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+        >
+          Proceed to PRL Application Form
+        </Link>
       </div>
     </div>
   );

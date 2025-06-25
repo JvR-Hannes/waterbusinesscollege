@@ -17,6 +17,9 @@ export default function RPLApplicationPage() {
     surname: "",
     idNumber: "",
     email: "",
+    course: qualificationCourses[0],
+    motivation: "",
+    file: null as File | null,
   });
 
   const [status, setStatus] = useState("");
@@ -27,10 +30,10 @@ export default function RPLApplicationPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  /*const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0] || null;
     setFormData((prev) => ({ ...prev, file }));
-  };
+  };*/
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

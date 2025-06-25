@@ -56,7 +56,7 @@ const mockCourses = [
     description: (
       <p>
         Understanding water reticulation systems, contamination, cleaning and disinfecting water mains, construction work, backfilling and compaction, trench excavation and installation of shoring, pressure zones and backflow prevention, maps and engineering drawings, hydraulics and flow measurements, connecting the customer.
-        <br />
+        <br /><br />
         Learner material is available 24/7 online on our LMS.
       </p>
     ),
@@ -68,7 +68,7 @@ const mockCourses = [
     description: (
       <p>
         Build an understanding of pipes, piping, and pipe joining in a water reticulation system.
-        <br />
+        <br /><br />
         Learner material is available 24/7 online on our LMS.
       </p>
     ),
@@ -92,7 +92,7 @@ const mockCourses = [
     description: (
       <p>
         Build an understanding of operating and maintaining a water reticulation system to reduce water loss through the maintenance of components such as valves, pumps and water meters. The module also focuses on the role of the team in this activity.
-        <br />
+        <br /><br />
         Learner material is available 24/7 online on our LMS.
       </p>
     ),

@@ -18,7 +18,7 @@ const mockCourses = [
     description: (
       <p>
         Build an understanding of the various mechanical, electrical, electronic, hydraulic, and pneumatic Build an understanding of the water services sector, the scope of work, career opportunities and the legislative framework for the Water Reticulation Practitioner.
-        <br />
+        <br /><br />
         Learner material is available 24/7 online on our LMS.
 
       </p>
@@ -32,7 +32,7 @@ const mockCourses = [
       <p>
         Build an understanding of the various mechanical, electrical, electronic, hydraulic, and pneumatic tools and equipment and electronic devices used by the WRP.
         In addition, the module provides specific guidelines when working with electricity and electrical equipment.
-        <br />
+        <br /><br />
         Learner material is available 24/7 online on our LMS.
       </p>
     ),
@@ -44,7 +44,7 @@ const mockCourses = [
     description: (
       <p>
         Build an understanding of basic slinging and lifting operations. In addition, the learners will learn the theory regarding directing the operation of cranes used in a water reticulation environment.
-        <br />
+        <br /><br />
         Learner material is available 24/7 online on our LMS.
       </p>
     ),

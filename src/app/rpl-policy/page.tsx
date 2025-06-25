@@ -16,7 +16,7 @@ export default function RPLPolicyPage() {
         />
       </div>
 
-      <div className="mb-6 mt-6 flex gap-20">
+      <div className="mb-6 mt-6 flex gap-45">
         <Link
           href="/"
           className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"

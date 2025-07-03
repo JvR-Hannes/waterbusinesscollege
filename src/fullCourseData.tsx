@@ -24,7 +24,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/M2.png",
     description: "Develop hands-on skills for water infrastructure installation and maintenance.",
     price: "R3100.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1222&redirect-to=cart",
+    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1222&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "Qualifications",
   },
   {

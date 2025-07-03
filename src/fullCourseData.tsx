@@ -56,7 +56,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/surfacewater.png",
     description: "",
     price: "R350.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1058&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
+    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=7336&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "Short Courses",
     requiresStudentDiscountApplication: true
   },
@@ -73,7 +73,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/ARD.png",
     description: "",
     price: "R350.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1058&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
+    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=7383&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "DIY Courses",
     requiresStudentDiscountApplication: true
   },
@@ -82,7 +82,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/centrifugal.png",
     description: "",
     price: "R2500.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1058&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
+    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=7140&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "DIY Courses",
   },
   {
@@ -90,7 +90,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/centrifugal.png",
     description: "Student",
     price: "R350.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1058&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
+    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=7124&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "DIY Courses",
     requiresStudentDiscountApplication: true
   },

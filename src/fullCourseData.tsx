@@ -16,7 +16,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/M1.png",
     description: "Gain essential workplace knowledge including communication, ethics, and numeracy.",
     price: "R2600.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart-2=1057&redirect-to=cart-2",
+    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1057&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "Qualifications",
   },
   {
@@ -32,7 +32,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/M3.png",
     description: "Develop hands-on skills for water infrastructure installation and maintenance.",
     price: "R2600.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1221&redirect-to=cart",
+    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1221&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "Qualifications",
   },
   {
@@ -40,7 +40,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/M4.png",
     description: "Develop hands-on skills for water infrastructure installation and maintenance.",
     price: "R2600.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1220&redirect-to=cart",
+    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1220&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "Qualifications",
   },
   {
@@ -48,7 +48,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/surfacewater.png",
     description: "",
     price: "R2500.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1453&redirect-to=cart",
+    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1453&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "Short Courses",
   },
   {
@@ -56,7 +56,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/surfacewater.png",
     description: "",
     price: "R350.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1058&redirect-to=cart",
+    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1058&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "Short Courses",
     requiresStudentDiscountApplication: true
   },
@@ -65,7 +65,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/ARD.png",
     description: "",
     price: "R2500.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=3741&redirect-to=cart",
+    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=3741&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "DIY Courses",
   },
   {
@@ -73,7 +73,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/ARD.png",
     description: "",
     price: "R350.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1058&redirect-to=cart",
+    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1058&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "DIY Courses",
     requiresStudentDiscountApplication: true
   },
@@ -82,7 +82,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/centrifugal.png",
     description: "",
     price: "R2500.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1058&redirect-to=cart",
+    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1058&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "DIY Courses",
   },
   {
@@ -90,7 +90,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/centrifugal.png",
     description: "Student",
     price: "R350.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1058&redirect-to=cart",
+    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1058&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "DIY Courses",
     requiresStudentDiscountApplication: true
   },

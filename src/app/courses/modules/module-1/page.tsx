@@ -1,6 +1,10 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
+
 export default function Module1Page() {
+  const router = useRouter();
+
   return (
     <main className="bg-white min-h-screen p-8">
       <h1 className="text-3xl font-bold mb-6 text-center">Module 1 - Course Info</h1>
@@ -16,7 +20,7 @@ export default function Module1Page() {
       <div className="flex justify-center">
         <button
           className="bg-[#2e528e] hover:bg-[#2e528e] text-white font-semibold px-6 py-3 rounded-lg shadow w-[400px]"
-          onClick={() => window.location.href = '/register'} // or your actual internal registration page
+          onClick={() => router.push('/register')}
         >
           Purchase course
         </button>

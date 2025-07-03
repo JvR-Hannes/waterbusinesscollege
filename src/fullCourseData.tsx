@@ -16,7 +16,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/M1.png",
     description: "Gain essential workplace knowledge including communication, ethics, and numeracy.",
     price: "R2600.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart-2=1057&redirect-to=cart",
+    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart-2=1057&redirect-to=cart-2",
     category: "Qualifications",
   },
   {

@@ -70,7 +70,7 @@ export default function StudentDiscountApplicationPage() {
 
   return (
     <main className="py-16 px-4 max-w-3xl mx-auto">
-      <h1 className="text-4xl font-bold mb-6 text-center">Student Discount Application</h1>
+      <h1 className="text-4xl font-bold mb-6 text-center">Student Application Form</h1>
       <p className="text-xl mb-10 text-center text-blue-500">
         Apply for your student discount by submitting this form with supporting documentation.
       </p>
@@ -83,6 +83,7 @@ export default function StudentDiscountApplicationPage() {
                 field === "idNumber" ? "ID Number" :
                   field === "contactNumber" ? "Contact Number" :
                     "Email Address"}
+              <span className="text-red-500 ml-1">*</span>
             </label>
             <input
               id={field}
@@ -101,7 +102,7 @@ export default function StudentDiscountApplicationPage() {
 
         <div>
           <label className="block mb-2 font-semibold" htmlFor="file">
-            Upload Student Registration Form (PDF/JPG/PNG)
+            Upload Current Student Registration Document (PDF/JPG/PNG)
           </label>
           <input
             type="file"

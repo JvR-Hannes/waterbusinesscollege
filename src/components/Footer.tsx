@@ -24,7 +24,7 @@ export default function Footer() {
         {/* Contact Info */}
         <div className="px-25">
           <h3 className="font-semibold text-xl mb-8">Contact Us</h3>
-          <p className="mb-2">Email: <a href="mailto:info@waterbusinesscollege.co.za">info@waterbusinesscollege.co.za</a></p>
+          <p className="mb-2">Email: <a href="mailto:contactus@waterbusinesscollege.co.za">info@waterbusinesscollege.co.za</a></p>
           <p className="mb-2">Phone: +27 (0)81 727 9793</p>
           <p className="mt-2">Offices H4,<br />
             The Willows Office Park,<br />

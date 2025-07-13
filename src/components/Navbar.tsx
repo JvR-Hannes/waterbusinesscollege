@@ -49,9 +49,9 @@ const navLinks = [
     submenu: [
       { label: "QCTO Accreditation Letter", href: "/qcto-accreditation-letter" },
       { label: "WBC Overview", href: "/overview-of-the-water-reticulation-qualification-nqf-04-2" },
-      { label: "Reticulation Qualification (NQF 04)", href: "/overview-of-the-water-reticulation-qualification-nqf-04" },
-      { label: "Reticulation (Duplicate)", href: "/qcto-accreditation-letter-duplicate-1438" },
-      { label: "Infrastructure Manager (NQF 08)", href: "/water-infrastructure-manager-nqf-08" },
+      { label: "Water Reticulation Practitioner Qualification (NQF Level 4)", href: "/overview-of-the-water-reticulation-qualification-nqf-04" },
+      { label: "Occupational Certificate: Water Reticulation Practitioner", href: "/qcto-accreditation-letter-duplicate-1438" },
+      { label: "Occupational Certificate: Water Infrastructure Manager", href: "/water-infrastructure-manager-nqf-08" },
     ],
   },
   {

@@ -20,7 +20,7 @@ export default function QualificationApplicationPage() {
     course: fullCourses[0],
     module: "",
     motivation: "",
-    supportingDocuments: null as File | null,
+    supportingDocuments: [] as File[], // ✅ changed to array
   });
 
   const selectedCourse = formData.course;
@@ -43,8 +43,14 @@ export default function QualificationApplicationPage() {
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, files } = e.target;
-    const file = files?.[0] || null;
-    setFormData((prev) => ({ ...prev, [name]: file }));
+    if (!files) return;
+
+    if (name === "supportingDocuments") {
+      const fileList = Array.from(files).slice(0, 2); // ✅ Limit to first 2 files
+      setFormData((prev) => ({ ...prev, [name]: fileList }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: files[0] || null }));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -53,10 +59,14 @@ export default function QualificationApplicationPage() {
 
     const payload = new FormData();
     Object.entries(formData).forEach(([key, value]) => {
-      if (value instanceof Blob) {
-        payload.append(key, value); // for file fields
+      if (key === "supportingDocuments" && Array.isArray(value)) {
+        value.forEach((file) => {
+          payload.append(key, file);
+        });
+      } else if (value instanceof Blob) {
+        payload.append(key, value);
       } else if (typeof value === "string") {
-        payload.append(key, value); // for text fields
+        payload.append(key, value);
       }
     });
 
@@ -78,7 +88,7 @@ export default function QualificationApplicationPage() {
           course: fullCourses[0],
           module: "",
           motivation: "",
-          supportingDocuments: null,
+          supportingDocuments: [],
         });
       } else {
         setStatus(result.error || "Something went wrong.");
@@ -223,16 +233,22 @@ export default function QualificationApplicationPage() {
         {/* Supporting Docs Upload */}
         <div>
           <label htmlFor="supportingDocuments" className="block mb-2 font-semibold">
-            Upload your supporting documents (certificates, transcripts, etc.)
+            Upload relevant academic / certificates (max 2)
           </label>
           <input
             type="file"
             id="supportingDocuments"
             name="supportingDocuments"
             accept=".pdf,.jpg,.jpeg,.png"
+            multiple
             onChange={handleFileChange}
             className="w-full border border-gray-300 rounded p-2"
           />
+          {formData.supportingDocuments.length > 0 && (
+            <p className="text-sm text-gray-600 mt-1">
+              {formData.supportingDocuments.length} file(s) selected
+            </p>
+          )}
         </div>
 
         {/* Submit Button */}

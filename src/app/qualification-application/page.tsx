@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { courses } from "@/coursesData";
 import { courseModuleMapping } from "@/config/courseModuleMapping";
 
@@ -213,6 +214,22 @@ export default function QualificationApplicationPage() {
             </select>
           </div>
         )}
+
+        {/* RPL Policy Button + Tooltip */}
+        <div className="mt-4 mb-6 flex items-center gap-4">
+          <Link
+            href="/rpl-application"
+            className="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition"
+          >
+            RPL Application
+          </Link>
+          <div className="relative group cursor-pointer">
+            <span className="text-blue-600 text-xl">ℹ️</span>
+            <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-64 bg-gray-800 text-white text-sm rounded px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10">
+              {"Recognition of Prior Learning (RPL) - Water Business College (WBC) recognises the knowledge and skills gained through life experiences and assesses their relevance against chosen qualifications using an applicant's Portfolio of Evidence. RPL provides a pathway for those with practical experiences to progress in their respective disciplines. This option enables applicants with working experience instead of academic / tertiary qualifications to enrol for occupational qualifications"}
+            </div>
+          </div>
+        </div>
 
         {/* Motivation / Statement */}
         <div>

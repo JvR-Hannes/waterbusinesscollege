@@ -15,12 +15,12 @@ export default function QualificationApplicationPage() {
   const [formData, setFormData] = useState({
     fullName: "",
     surname: "",
-    idNumber: "",
+    idNumberFile: null as File | null,
     email: "",
     course: fullCourses[0],
     module: "",
     motivation: "",
-    file: null as File | null,
+    supportingDocuments: null as File | null,
   });
 
   const selectedCourse = formData.course;
@@ -31,11 +31,20 @@ export default function QualificationApplicationPage() {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+    if (name === "course") {
+      setFormData((prev) => ({
+        ...prev,
+        course: value,
+        module: "", // reset module
+      }));
+      return;
+    }
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0] || null;
-    setFormData((prev) => ({ ...prev, file }));
+    const { name, files } = e.target;
+    const file = files?.[0] || null;
+    setFormData((prev) => ({ ...prev, [name]: file }));
   };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -45,7 +54,7 @@ export default function QualificationApplicationPage() {
     const payload = new FormData();
     Object.entries(formData).forEach(([key, value]) => {
       if (value instanceof Blob) {
-        payload.append(key, value); // for File
+        payload.append(key, value); // for file fields
       } else if (typeof value === "string") {
         payload.append(key, value); // for text fields
       }
@@ -64,12 +73,12 @@ export default function QualificationApplicationPage() {
         setFormData({
           fullName: "",
           surname: "",
-          idNumber: "",
+          idNumberFile: null,
           email: "",
           course: fullCourses[0],
           module: "",
           motivation: "",
-          file: null,
+          supportingDocuments: null,
         });
       } else {
         setStatus(result.error || "Something went wrong.");
@@ -123,17 +132,17 @@ export default function QualificationApplicationPage() {
         </div>
 
         {/* ID Number */}
+        {/* ID Upload */}
         <div>
-          <label htmlFor="idNumber" className="block mb-2 font-semibold">
-            ID Number
+          <label htmlFor="idNumberFile" className="block mb-2 font-semibold">
+            Upload your valid ID / Passport document
           </label>
           <input
-            id="idNumber"
-            name="idNumber"
-            type="tel"
-            required
-            value={formData.idNumber}
-            onChange={handleChange}
+            type="file"
+            id="idNumberFile"
+            name="idNumberFile"
+            accept=".pdf,.jpg,.jpeg,.png"
+            onChange={handleFileChange}
             className="w-full border border-gray-300 rounded p-2"
           />
         </div>
@@ -174,7 +183,7 @@ export default function QualificationApplicationPage() {
           </select>
         </div>
 
-        {/* Course Dropdown */}
+        {/* Module Dropdown */}
         {modules.length > 0 && (
           <div>
             <label htmlFor="module" className="block mb-2 font-semibold">Module</label>
@@ -211,15 +220,15 @@ export default function QualificationApplicationPage() {
           />
         </div>
 
-        {/* File Upload */}
+        {/* Supporting Docs Upload */}
         <div>
-          <label htmlFor="file" className="block mb-2 font-semibold">
-            Upload your valid ID / Passport document
+          <label htmlFor="supportingDocuments" className="block mb-2 font-semibold">
+            Upload your supporting documents (certificates, transcripts, etc.)
           </label>
           <input
             type="file"
-            id="file"
-            name="file"
+            id="supportingDocuments"
+            name="supportingDocuments"
             accept=".pdf,.jpg,.jpeg,.png"
             onChange={handleFileChange}
             className="w-full border border-gray-300 rounded p-2"

@@ -10,7 +10,7 @@ type Course = {
 
 export const courses: Course[] = [
   {
-    title: ("Water Reticulation Practitioner \n(NQF Level 4)"), /*Adjust the brackets*/
+    title: "Water Reticulation Practitioner (NQF Level 4)", /*Adjust the brackets*/
     description: (
       <p>
         This qualification is designed for individuals aiming to install, operate,

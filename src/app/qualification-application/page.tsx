@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { fullCourses } from "@/fullCourseData";
+import { courseModuleMapping } from "@/config/courseModuleMapping";
 
 const underlinePath = "M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7";
 
@@ -18,10 +19,13 @@ export default function QualificationApplicationPage() {
     idNumber: "",
     email: "",
     course: qualificationCourses[0],
+    module: "",
     motivation: "",
     file: null as File | null,
   });
 
+  const selectedCourse = formData.course;
+  const modules = courseModuleMapping[selectedCourse]?.modules ?? [];
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -64,6 +68,7 @@ export default function QualificationApplicationPage() {
           idNumber: "",
           email: "",
           course: qualificationCourses[0],
+          module: "",
           motivation: "",
           file: null,
         });
@@ -170,6 +175,27 @@ export default function QualificationApplicationPage() {
           </select>
         </div>
 
+        {/* Course Dropdown */}
+        {modules.length > 0 && (
+          <div>
+            <label htmlFor="module" className="block mb-2 font-semibold">Module (optional)</label>
+            <select
+              id="module"
+              name="module"
+              value={formData.module || ""}
+              onChange={handleChange}
+              className="w-full border border-gray-300 rounded p-2"
+            >
+              <option value="">-- Select a Module --</option>
+              {modules.map((mod) => (
+                <option key={mod.href} value={mod.href}>
+                  {mod.title}
+                </option>
+              ))}
+            </select>
+          </div>
+        )}
+
         {/* Motivation / Statement */}
         <div>
           <label htmlFor="motivation" className="block mb-2 font-semibold">
@@ -189,7 +215,7 @@ export default function QualificationApplicationPage() {
         {/* File Upload */}
         <div>
           <label htmlFor="file" className="block mb-2 font-semibold">
-            Upload Supporting Documents
+            Upload your valid ID / Passport document
           </label>
           <input
             type="file"

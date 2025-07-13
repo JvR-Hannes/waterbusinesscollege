@@ -2,14 +2,13 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { fullCourses } from "@/fullCourseData";
+import { courses } from "@/coursesData";
 import { courseModuleMapping } from "@/config/courseModuleMapping";
 
 const underlinePath = "M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7";
 
-// List of qualification courses for the dropdown.
-const qualificationCourses = fullCourses
-  .filter((course) => course.category === "Qualifications")
+// List of courses for the dropdown.
+const fullCourses = courses
   .map((course) => course.title);
 
 export default function QualificationApplicationPage() {
@@ -18,7 +17,7 @@ export default function QualificationApplicationPage() {
     surname: "",
     idNumber: "",
     email: "",
-    course: qualificationCourses[0],
+    course: fullCourses[0],
     module: "",
     motivation: "",
     file: null as File | null,
@@ -67,7 +66,7 @@ export default function QualificationApplicationPage() {
           surname: "",
           idNumber: "",
           email: "",
-          course: qualificationCourses[0],
+          course: fullCourses[0],
           module: "",
           motivation: "",
           file: null,
@@ -167,7 +166,7 @@ export default function QualificationApplicationPage() {
             onChange={handleChange}
             className="w-full border border-gray-300 rounded p-2"
           >
-            {qualificationCourses.map((c) => (
+            {fullCourses.map((c) => (
               <option key={c} value={c}>
                 {c}
               </option>

@@ -6,7 +6,6 @@ import { fullCourses } from "@/fullCourseData";
 
 const underlinePath = "M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7";
 
-// List of qualification courses for the dropdown.
 const qualificationCourses = fullCourses
   .filter((course) => course.category === "Qualifications")
   .map((course) => course.title);
@@ -19,21 +18,41 @@ export default function RPLApplicationPage() {
     email: "",
     course: qualificationCourses[0],
     motivation: "",
-    file: null as File | null,
+    uploads: {
+      file1: [] as File[],
+      file2: [] as File[],
+      file3: [] as File[],
+      file4: [] as File[],
+    },
   });
 
   const [status, setStatus] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  /*const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0] || null;
-    setFormData((prev) => ({ ...prev, file }));
-  };*/
+  const handleFileChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    key: keyof typeof formData.uploads
+  ) => {
+    const files = Array.from(e.target.files || []);
+    if (files.length > 3) {
+      alert("You can only upload up to 3 files per section.");
+      return;
+    }
+    setFormData((prev) => ({
+      ...prev,
+      uploads: {
+        ...prev.uploads,
+        [key]: files,
+      },
+    }));
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -41,10 +60,14 @@ export default function RPLApplicationPage() {
 
     const payload = new FormData();
     Object.entries(formData).forEach(([key, value]) => {
-      if (value instanceof Blob) {
-        payload.append(key, value); // for File
-      } else if (typeof value === "string") {
-        payload.append(key, value); // for text fields
+      if (key === "uploads") {
+        Object.entries(value).forEach(([uploadKey, files]) => {
+          (files as File[]).forEach((file) => {
+            payload.append(uploadKey, file);
+          });
+        });
+      } else {
+        payload.append(key, value as string);
       }
     });
 
@@ -65,7 +88,12 @@ export default function RPLApplicationPage() {
           email: "",
           course: qualificationCourses[0],
           motivation: "",
-          file: null,
+          uploads: {
+            file1: [],
+            file2: [],
+            file3: [],
+            file4: [],
+          },
         });
       } else {
         setStatus(result.error || "Something went wrong.");
@@ -150,13 +178,83 @@ export default function RPLApplicationPage() {
           />
         </div>
 
+        {/* Upload Sections */}
+        <div className="space-y-4">
+          <div>
+            <label htmlFor="upload1" className="block mb-2 font-semibold">
+              Upload ID Document (Max 3 files)
+            </label>
+            <input
+              id="upload1"
+              type="file"
+              multiple
+              accept=".pdf,.doc,.docx,.jpg,.png"
+              onChange={(e) => handleFileChange(e, "file1")}
+              className="w-full border border-gray-300 rounded p-2"
+            />
+            <p className="text-sm text-gray-500 mt-1">
+              {formData.uploads.file1.length} file(s) selected
+            </p>
+          </div>
+
+          <div>
+            <label htmlFor="upload2" className="block mb-2 font-semibold">
+              Upload Academic Transcript (Max 3 files)
+            </label>
+            <input
+              id="upload2"
+              type="file"
+              multiple
+              accept=".pdf,.doc,.docx,.jpg,.png"
+              onChange={(e) => handleFileChange(e, "file2")}
+              className="w-full border border-gray-300 rounded p-2"
+            />
+            <p className="text-sm text-gray-500 mt-1">
+              {formData.uploads.file2.length} file(s) selected
+            </p>
+          </div>
+
+          <div>
+            <label htmlFor="upload3" className="block mb-2 font-semibold">
+              Upload Work Experience Proof (Max 3 files)
+            </label>
+            <input
+              id="upload3"
+              type="file"
+              multiple
+              accept=".pdf,.doc,.docx,.jpg,.png"
+              onChange={(e) => handleFileChange(e, "file3")}
+              className="w-full border border-gray-300 rounded p-2"
+            />
+            <p className="text-sm text-gray-500 mt-1">
+              {formData.uploads.file3.length} file(s) selected
+            </p>
+          </div>
+
+          <div>
+            <label htmlFor="upload4" className="block mb-2 font-semibold">
+              Upload Other Supporting Documents (Max 3 files)
+            </label>
+            <input
+              id="upload4"
+              type="file"
+              multiple
+              accept=".pdf,.doc,.docx,.jpg,.png"
+              onChange={(e) => handleFileChange(e, "file4")}
+              className="w-full border border-gray-300 rounded p-2"
+            />
+            <p className="text-sm text-gray-500 mt-1">
+              {formData.uploads.file4.length} file(s) selected
+            </p>
+          </div>
+        </div>
+
         {/* Submit Button */}
         <div>
           <button
             type="submit"
             disabled={loading}
-            className={`w-full bg-blue-600 text-white font-semibold py-2 px-6 rounded transition duration-200 ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-700"
-              }`}
+            className={`w-full bg-blue-600 text-white font-semibold py-2 px-6 rounded transition duration-200 ${loading ? "opacity-50 cursor-not-allowed" : "hover:bg-blue-700"}`}
           >
             {loading ? "Submitting..." : "Submit Application"}
           </button>
@@ -211,7 +309,7 @@ export default function RPLApplicationPage() {
             Water practitioners in the private sector as well as staff of both water services and water resource management institutions.
           </li>
           <li>
-            {"Technical staff that may either be recently employed and/or have many years’ experience but no formal academic qualifications."}
+            Technical staff that may either be recently employed and/or have many years’ experience but no formal academic qualifications.
           </li>
           <li>
             Qualified water practitioners that intend to improve their education and/or change discipline.
@@ -231,9 +329,7 @@ export default function RPLApplicationPage() {
           <div className="w-full md:w-1/2">
             <h4 className="text-2xl font-bold mb-4 text-blue-600">Real-World Training Environment</h4>
             <p className="text-gray-700 text-lg">
-              The Water Business College offers hands-on experience using our custom-built prototype
-              reticulation system. Learners are immersed in practical learning environments designed
-              to simulate municipal and industrial water systems.
+              The Water Business College offers hands-on experience using our custom-built prototype reticulation system. Learners are immersed in practical learning environments designed to simulate municipal and industrial water systems.
             </p>
           </div>
         </div>

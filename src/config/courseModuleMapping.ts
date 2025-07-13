@@ -8,7 +8,7 @@ export const courseModuleMapping: {
     }[];
   };
 } = {
-  "Water Reticulation Practitioner (NQF Level 4)": {
+  "Occupational Qualifications": {
     modules: [
       {
         title: "642605001-KM-01 // Module 1 // NQF 4 (CREDITS: 5)",

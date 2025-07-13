@@ -177,7 +177,7 @@ export default function QualificationApplicationPage() {
         {/* Course Dropdown */}
         {modules.length > 0 && (
           <div>
-            <label htmlFor="module" className="block mb-2 font-semibold">Module (optional)</label>
+            <label htmlFor="module" className="block mb-2 font-semibold">Module</label>
             <select
               id="module"
               name="module"

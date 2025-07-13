@@ -182,7 +182,7 @@ export default function RPLApplicationPage() {
         <div className="space-y-4">
           <div>
             <label htmlFor="upload1" className="block mb-2 font-semibold">
-              Upload ID Document (Max 3 files)
+              Upload a letter of recommendation from a supervisor / manager
             </label>
             <input
               id="upload1"
@@ -199,7 +199,7 @@ export default function RPLApplicationPage() {
 
           <div>
             <label htmlFor="upload2" className="block mb-2 font-semibold">
-              Upload Academic Transcript (Max 3 files)
+              Upload your Portfolio of Evidence (POE) (max 3)
             </label>
             <input
               id="upload2"
@@ -216,7 +216,7 @@ export default function RPLApplicationPage() {
 
           <div>
             <label htmlFor="upload3" className="block mb-2 font-semibold">
-              Upload Work Experience Proof (Max 3 files)
+              Upload a short CV (max 2 pages)
             </label>
             <input
               id="upload3"
@@ -233,7 +233,7 @@ export default function RPLApplicationPage() {
 
           <div>
             <label htmlFor="upload4" className="block mb-2 font-semibold">
-              Upload Other Supporting Documents (Max 3 files)
+              Upload your certificates (max 3)
             </label>
             <input
               id="upload4"

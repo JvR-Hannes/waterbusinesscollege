@@ -110,7 +110,7 @@ export default function RPLApplicationPage() {
     <main className="py-16 px-4 max-w-3xl mx-auto">
       <h1 className="text-4xl font-bold mb-6 text-center">RPL Application Form</h1>
       <p className="text-2xl mb-10 text-center text-blue-500">
-        Please fill in the details and upload the required documents.
+        Please Fill in the details and Upload the Required Documents.
       </p>
 
       <form onSubmit={handleSubmit} className="space-y-6" encType="multipart/form-data">
@@ -182,7 +182,7 @@ export default function RPLApplicationPage() {
         <div className="space-y-4">
           <div>
             <label htmlFor="upload1" className="block mb-2 font-semibold">
-              Upload a letter of recommendation from a supervisor / manager
+              Upload a Letter of Recommendation from a Supervisor / Manager
             </label>
             <input
               id="upload1"
@@ -216,7 +216,7 @@ export default function RPLApplicationPage() {
 
           <div>
             <label htmlFor="upload3" className="block mb-2 font-semibold">
-              Upload a short CV (max 2 pages)
+              Upload a Short CV (max 2 pages)
             </label>
             <input
               id="upload3"
@@ -233,7 +233,7 @@ export default function RPLApplicationPage() {
 
           <div>
             <label htmlFor="upload4" className="block mb-2 font-semibold">
-              Upload your certificates (max 3)
+              Upload your Certificates (max 3)
             </label>
             <input
               id="upload4"

@@ -146,7 +146,7 @@ export default function QualificationApplicationPage() {
         {/* ID Upload */}
         <div>
           <label htmlFor="idNumberFile" className="block mb-2 font-semibold">
-            Upload your valid ID / Passport document
+            Upload your Valid ID / Passport document
           </label>
           <input
             type="file"
@@ -250,7 +250,7 @@ export default function QualificationApplicationPage() {
         {/* Supporting Docs Upload */}
         <div>
           <label htmlFor="supportingDocuments" className="block mb-2 font-semibold">
-            Upload relevant academic / certificates (max 2)
+            Upload Relevant Academic / Certificates (max 2)
           </label>
           <input
             type="file"

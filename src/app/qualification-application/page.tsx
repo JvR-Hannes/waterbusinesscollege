@@ -9,8 +9,7 @@ import { courseModuleMapping } from "@/config/courseModuleMapping";
 const underlinePath = "M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7";
 
 // List of courses for the dropdown.
-const fullCourses = courses
-  .map((course) => course.title);
+const fullCourses = ["Water Reticulation Practitioner (NQF Level 4)"];
 
 export default function QualificationApplicationPage() {
   const [formData, setFormData] = useState({
@@ -146,7 +145,7 @@ export default function QualificationApplicationPage() {
         {/* ID Upload */}
         <div>
           <label htmlFor="idNumberFile" className="block mb-2 font-semibold">
-            Upload your Valid ID / Passport document
+            Upload Your Valid ID / Passport Document
           </label>
           <input
             type="file"

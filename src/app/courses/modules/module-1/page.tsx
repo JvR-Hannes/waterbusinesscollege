@@ -20,7 +20,7 @@ export default function Module1Page() {
       <div className="flex justify-center">
         <button
           className="bg-[#2e528e] hover:bg-[#2e528e] text-white font-semibold px-6 py-3 rounded-lg shadow w-[400px]"
-          onClick={() => router.push('/register')}
+          onClick={() => router.push('/qualification-application')}
         >
           Purchase course
         </button>

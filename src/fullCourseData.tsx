@@ -8,6 +8,7 @@ export type Course = {
   link?: string;
   category: string;
   requiresStudentDiscountApplication?: boolean;
+  requiresQualificationApplication?: boolean;
 };
 
 export const fullCourses: Course[] = [
@@ -18,6 +19,7 @@ export const fullCourses: Course[] = [
     price: "R2600.00",
     link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1057&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "Qualifications",
+    requiresQualificationApplication: true,
   },
   {
     title: "Module 2: The World of The Water Reticulation Practitioner – NQF L4",
@@ -26,6 +28,7 @@ export const fullCourses: Course[] = [
     price: "R3100.00",
     link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1222&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "Qualifications",
+    requiresQualificationApplication: true,
   },
   {
     title: "Module 3: Tools, Equipement and Electronic Devices – NQF L4",
@@ -34,6 +37,7 @@ export const fullCourses: Course[] = [
     price: "R2600.00",
     link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1221&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "Qualifications",
+    requiresQualificationApplication: true,
   },
   {
     title: "Module 4: Basic Slinging and Lifting Operations – NQF L4",
@@ -42,6 +46,7 @@ export const fullCourses: Course[] = [
     price: "R2600.00",
     link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1220&redirect_to=https://portal.waterbusinesscollege.co.za/cart-2/",
     category: "Qualifications",
+    requiresQualificationApplication: true,
   },
   {
     title: "Surface Water Management On Mines",

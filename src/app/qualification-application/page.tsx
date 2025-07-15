@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { courses } from "@/coursesData";
+// import { courses } from "@/coursesData";
 import { courseModuleMapping } from "@/config/courseModuleMapping";
 
 const underlinePath = "M7.7,145.6C109,125,299.9,116.2,401,121.3c42.1,2.2,87.6,11.8,87.3,25.7";

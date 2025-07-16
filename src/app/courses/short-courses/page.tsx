@@ -4,11 +4,17 @@ const mockCourses = [
   {
     title: " ",
     description: (
-      <p>
-        Build an understanding of the basic concepts, principles and practices which relate to the workplace context,
-        and the explicit and tacit rules which govern the workplace.<br /><br />
-        Learner material is available 24/7 online on our LMS.<br /><br /><br />
-      </p>
+      <>
+        <p>The Surface Water Management in Mining short course addresses the following:</p>
+        <ul className="list-disc pl-5 mt-2">
+          <li>Baseline climate & rainfall/runoff response</li>
+          <li>Flood hydrology & modelling of flood events</li>
+          <li>Stormwater management in the mining context</li>
+          <li>Developing surface water quality monitoring programs</li>
+          <li>Governing legislation - Management of surface water in the mining context</li>
+          <li>The importance of GIS in hydrological assessments</li>
+        </ul>
+      </>
     ),
     imageUrl: "/images/courses/short.png",
     href: "/courses/modules/shortcourses", // or the actual course detail path if available
@@ -29,7 +35,7 @@ export default function ShortCoursesPage() {
               imageUrl={course.imageUrl}
               href={course.href}
               variant="large"
-              buttonText="More Information" 
+              buttonText="More Information"
             />
           ))}
         </div>

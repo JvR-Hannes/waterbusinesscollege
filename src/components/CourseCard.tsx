@@ -16,8 +16,8 @@ type Props = {
 const CourseCard = ({ title, description, imageUrl, href, variant = "default", buttonText, customStyles }: Props) => {
   return (
     <div className={`relative group mx-auto p-8 space-y-4 transition-all duration-500 ease-in-out overflow-visible ${customStyles ? customStyles : variant === "large"
-        ? "w-[360px] md:w-[720px] h-[360px]"
-        : "w-[300px] hover:w-[720px] h-[350px]"
+        ? "w-[410px] md:w-[720px] h-[410px]"
+        : "w-[350px] hover:w-[720px] h-[400px]"
       }`}>
       {/* Card Background & Content */}
       <div className="absolute rounded-2xl inset-0 z-20 flex flex-col justify-center px-8 py-8 transition-all duration-500 text-white-900 group-hover:bg-[#3e64de] group-hover:text-white">
@@ -25,7 +25,7 @@ const CourseCard = ({ title, description, imageUrl, href, variant = "default", b
           <h3 className="text-2xl text-white-900 mb-6 mt-3">
             <span className="text-white">{title}</span>
           </h3>
-          <div className="text-md text-white-700 line-clamp-7 mb-3 mt-3">
+          <div className="text-md text-white-700 line-clamp-15 mb-3 mt-3">
             {description}
           </div>
 

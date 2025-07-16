@@ -40,7 +40,7 @@ export default function DiyCourses() {
     <main className="bg-white py-16 min-h-screen">
       <div className="container mx-auto px-4 align-center">
         <h1 className="text-3xl font-bold mb-12 text-center">DIY Courses</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 text-md justify-items-center gap-y-14 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 text-sm justify-items-center gap-y-12 pb-6 mb-12">
           {mockCourses.map((course, index) => (
             <CourseCard
               key={index}

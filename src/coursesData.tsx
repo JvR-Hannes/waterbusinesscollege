@@ -68,7 +68,7 @@ export const courses: Course[] = [
           assessment of waste materials (incl. mine wastes), etc.
         </p>
         <p>The DIY courses are available 24/7 and are ideal for:</p>
-        <ol className="list-decimal list-inside ml-1">
+        <ul className="list-decimal list-inside ml-1">
           <li>
             <strong>Technicians, Younger practitioners</strong> and{" "}
             <strong>Senior and post-graduate students</strong> in the water, related
@@ -77,7 +77,7 @@ export const courses: Course[] = [
           <li>
             <strong>Scholars</strong> reviewing math, hydraulics, and more
           </li>
-        </ol>
+        </ul>
       </>
     ),
     image: "/images/courses/diy.png",

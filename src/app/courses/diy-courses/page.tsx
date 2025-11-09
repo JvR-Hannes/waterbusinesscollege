@@ -24,6 +24,8 @@ const mockCourses = [
       <p>
         The Introduction to Centrifugal Pumps DIY course focusses on the naming of pumps, pumping rates, suction and pressure head, pump curves, pump selection, pumps in parallel and in series and system curves.
         <br /><br />
+        The DIY course contains informative videos.
+        <br /><br />
         The DIY courses are available 24/7 and the learner / participant can start at any time once registered!
         <br /><br />
         DELIVERED ONLINE

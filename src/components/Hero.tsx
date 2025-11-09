@@ -13,18 +13,18 @@ export default function Hero() {
             <span className="text-white">WATER BUSINESS COLLEGE</span>
           </h1>
           <p className="text-base text-gray-100 font-small">
-            <strong>Water Business College (WBC) is an accredited<br />
-            Skills Development Provider (QCTO Accreditation Number: QCTOSDP01200724-2088).</strong>
+            <strong>Water Business College (WBC) is an accredited
+            Skills Development Provider<br /> (QCTO Accreditation Number: QCTOSDP01200724-2088).</strong>
           </p>
           <p className="text-base text-gray-100 font-small">
-            <strong>WBC aims to contribute to the development of skills<br />
-            and capacity in the water sector through occupational<br />
+            <strong>WBC aims to contribute to the development of skills
+            and capacity in the water<br /> sector through occupational
             qualifications and skills training programmes.</strong>
           </p>
           <p className="text-base text-gray-100 font-small">
             <strong>Developing Centre of Excellence contributing to the improvement of water<br /> management.<br />
-            We are creating a Personalised, <br />
-            Flexible and an Affordable Learning Environment for the learner.</strong>
+            We are creating a Personalised,
+            Flexible and an Affordable Learning Environment<br /> for the learner.</strong>
           </p>
           <p className="text-base text-gray-100 font-small">
             <strong>Our training programmes are Employer Friendly. <br />

@@ -15,16 +15,19 @@ export const fullCourses: Course[] = [
   {
     title: "Module 1: Workplace Fundamentals – NQF L4",
     image: "/images/courses/M1.png",
-    description: "Gain essential workplace knowledge including communication, ethics, and numeracy.",
+    description:
+      "Gain essential workplace knowledge including communication, ethics, and numeracy.",
     price: "R2600.00",
     link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1057&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
     category: "Qualifications",
     requiresQualificationApplication: true,
   },
   {
-    title: "Module 2: The World of The Water Reticulation Practitioner – NQF L4",
+    title:
+      "Module 2: The World of The Water Reticulation Practitioner – NQF L4",
     image: "/images/courses/M2.png",
-    description: "Develop hands-on skills for water infrastructure installation and maintenance.",
+    description:
+      "Develop hands-on skills for water infrastructure installation and maintenance.",
     price: "R3100.00",
     link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1222&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
     category: "Qualifications",
@@ -33,7 +36,8 @@ export const fullCourses: Course[] = [
   {
     title: "Module 3: Tools, Equipement and Electronic Devices – NQF L4",
     image: "/images/courses/M3.png",
-    description: "Develop hands-on skills for water infrastructure installation and maintenance.",
+    description:
+      "Develop hands-on skills for water infrastructure installation and maintenance.",
     price: "R2600.00",
     link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1221&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
     category: "Qualifications",
@@ -42,7 +46,8 @@ export const fullCourses: Course[] = [
   {
     title: "Module 4: Basic Slinging and Lifting Operations – NQF L4",
     image: "/images/courses/M4.png",
-    description: "Develop hands-on skills for water infrastructure installation and maintenance.",
+    description:
+      "Develop hands-on skills for water infrastructure installation and maintenance.",
     price: "R2600.00",
     link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1220&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
     category: "Qualifications",
@@ -63,10 +68,11 @@ export const fullCourses: Course[] = [
     price: "R350.00",
     link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=7336&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
     category: "Short Courses",
-    requiresStudentDiscountApplication: true
+    requiresStudentDiscountApplication: true,
   },
   {
-    title: "Waste Classification and Acid Rock Drainage (ARD) Assessment - Platinum Mine",
+    title:
+      "Waste Classification and Acid Rock Drainage (ARD) Assessment - Platinum Mine",
     image: "/images/courses/ARD.png",
     description: "",
     price: "R2500.00",
@@ -74,16 +80,17 @@ export const fullCourses: Course[] = [
     category: "DIY Courses",
   },
   {
-    title: "Waste Classification and Acid Rock Drainage (ARD) Assessment - Platinum Mine - Student",
+    title:
+      "Waste Classification and Acid Rock Drainage (ARD) Assessment - Platinum Mine - Student",
     image: "/images/courses/ARD.png",
     description: "",
     price: "R350.00",
     link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=7383&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
     category: "DIY Courses",
-    requiresStudentDiscountApplication: true
+    requiresStudentDiscountApplication: true,
   },
   {
-    title: "Introduction to Centrifugal Pumps",
+    title: "Introduction to Basic Theory on Pumps (Centrigual Pumps) Pumps",
     image: "/images/courses/centrifugal.png",
     description: "",
     price: "R2500.00",
@@ -91,12 +98,12 @@ export const fullCourses: Course[] = [
     category: "DIY Courses",
   },
   {
-    title: "Introduction to Centrifugal Pumps - Student",
+    title: "Introduction to Basic Theory on Pumps (Centrigual Pumps) - Student",
     image: "/images/courses/centrifugal.png",
     description: "Student",
     price: "R350.00",
     link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=7124&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
     category: "DIY Courses",
-    requiresStudentDiscountApplication: true
+    requiresStudentDiscountApplication: true,
   },
 ];

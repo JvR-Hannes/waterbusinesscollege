@@ -5,14 +5,24 @@ const mockCourses = [
     title: " ",
     description: (
       <p>
-        The focus of the online DIY course is on methodology, i.e. how to conduct a Waste Classification and an Acid Rock Drainage (ARD / ABA) Assessment of mine residue deposits / waste material.
-        Target audiences: Technicians, Younger practitioners and Senior and post-graduate students in the water resources, engineering, environmental and science disciplines.
-        {"Case Study: Platinum Group Minerals (PGM's) in the Bushveld Igneous Complex (BIC)."}
-        <br /><br />
-        The DIY courses are available 24/7 and the learner / participant can start at any time once registered!
-        <br /><br />
+        The focus of the online DIY course is on methodology, i.e. how to
+        conduct a Waste Classification and an Acid Rock Drainage (ARD / ABA)
+        Assessment of mine residue deposits / waste material. Target audiences:
+        Technicians, Younger practitioners and Senior and post-graduate students
+        in the water resources, engineering, environmental and science
+        disciplines.
+        {
+          "Case Study: Platinum Group Minerals (PGM's) in the Bushveld Igneous Complex (BIC)."
+        }
+        <br />
+        <br />
+        The DIY courses are available 24/7 and the learner / participant can
+        start at any time once registered!
+        <br />
+        <br />
         DELIVERED ONLINE
-        <br /><br />
+        <br />
+        <br />
       </p>
     ),
     imageUrl: "/images/courses/waste.png",
@@ -22,14 +32,22 @@ const mockCourses = [
     title: " ",
     description: (
       <p>
-        The Introduction to Centrifugal Pumps DIY course focusses on the naming of pumps, pumping rates, suction and pressure head, pump curves, pump selection, pumps in parallel and in series and system curves.
-        <br /><br />
+        The Introduction to Basic Theory on Pumps (Centrigual Pumps) DIY course
+        focusses on the naming of pumps, pumping rates, suction and pressure
+        head, pump curves, pump selection, pumps in parallel and in series and
+        system curves.
+        <br />
+        <br />
         The DIY course contains informative videos.
-        <br /><br />
-        The DIY courses are available 24/7 and the learner / participant can start at any time once registered!
-        <br /><br />
+        <br />
+        <br />
+        The DIY courses are available 24/7 and the learner / participant can
+        start at any time once registered!
+        <br />
+        <br />
         DELIVERED ONLINE
-        <br /><br />
+        <br />
+        <br />
       </p>
     ),
     imageUrl: "/images/courses/diyIntro.png",

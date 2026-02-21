@@ -90,7 +90,7 @@ export const fullCourses: Course[] = [
     requiresStudentDiscountApplication: true,
   },
   {
-    title: "Introduction to Basic Theory on Pumps (Centrigual Pumps) Pumps",
+    title: "Introduction to Basic Theory on Pumps (Centrigual Pumps)",
     image: "/images/courses/centrifugal.png",
     description: "",
     price: "R2500.00",

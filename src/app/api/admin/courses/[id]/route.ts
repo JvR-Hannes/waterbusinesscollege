@@ -30,6 +30,8 @@ export async function PUT(request: Request, { params }: Params) {
     isFree,
     status,
     thumbnailMediaId,
+    legacyPortalCourseUrl,
+    legacyWooProductUrl,
   } = body as {
     title?: string;
     slug?: string;

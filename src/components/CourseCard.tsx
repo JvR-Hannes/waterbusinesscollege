@@ -11,9 +11,19 @@ type Props = {
   variant?: "default" | "large";
   buttonText?: string;
   customStyles?: string;
+  temporarilyUnavailable?: boolean;
 };
 
-const CourseCard = ({ title, description, imageUrl, href, variant = "default", buttonText, customStyles }: Props) => {
+const CourseCard = ({
+  title,
+  description,
+  imageUrl,
+  href,
+  variant = "default",
+  buttonText,
+  customStyles,
+  temporarilyUnavailable,
+}: Props) => {
   return (
     <div className={`relative group mx-auto p-8 space-y-4 transition-all duration-500 ease-in-out overflow-visible ${customStyles ? customStyles : variant === "large"
         ? "w-[410px] md:w-[720px] h-[410px]"
@@ -29,14 +39,22 @@ const CourseCard = ({ title, description, imageUrl, href, variant = "default", b
             {description}
           </div>
 
-          {/* ✅ Only this button navigates */}
-          {href && (
-            <Link
-              href={href}
-              className="inline-block mt-2 mb-2 px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded transition"
+          {temporarilyUnavailable ? (
+            <span
+              className="mt-2 mb-2 inline-block rounded border border-red-600 bg-white px-4 py-2 text-sm font-semibold text-red-600 shadow-sm"
+              role="status"
             >
-              {buttonText || "View The Courses"}
-            </Link>
+              Temporarily Unavailable
+            </span>
+          ) : (
+            href && (
+              <Link
+                href={href}
+                className="inline-block mt-2 mb-2 px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded transition"
+              >
+                {buttonText || "View The Courses"}
+              </Link>
+            )
           )}
         </div>
       </div>

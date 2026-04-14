@@ -12,7 +12,11 @@ const navLinks = [
   },
   {
     label: "Login",
-    href: "/dashboard",
+    href: "#",
+    submenu: [
+      { label: "Student Login", href: "/dashboard" },
+      { label: "Admin Login", href: "/admin/login" },
+    ],
   },
   {
     label: "Application Procedures",
@@ -36,7 +40,7 @@ const navLinks = [
     href: "/my-account",
     submenu: [
       { label: "Checkout", href: "https://waterbusinesscollege.co.za/checkout/" },
-      { label: "Cart", href: "https://waterbusinesscollege.co.za/cart/" },
+      { label: "Cart", href: "https://waterbusinesscollege.co.za/cart-2/" },
     ],
   },
   {

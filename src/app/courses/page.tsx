@@ -52,12 +52,21 @@ export default function CoursesPage() {
                           APPLY
                         </a>
                       ) : course.requiresQualificationApplication ? (
-                        <a
-                          href="/qualification-application"
-                          className="inline-block text-center px-8 py-2 bg-white border border-blue-600 text-blue-600 text-sm rounded hover:bg-blue-700 hover:text-white transition"
-                        >
-                          APPLY
-                        </a>
+                        category === "Qualifications" ? (
+                          <span
+                            className="inline-block w-full text-center px-8 py-2 bg-white border border-red-600 text-red-600 text-sm font-semibold rounded shadow-sm"
+                            role="status"
+                          >
+                            Temporarily Unavailable
+                          </span>
+                        ) : (
+                          <a
+                            href="/qualification-application"
+                            className="inline-block text-center px-8 py-2 bg-white border border-blue-600 text-blue-600 text-sm rounded hover:bg-blue-700 hover:text-white transition"
+                          >
+                            APPLY
+                          </a>
+                        )
                       ) : (
                         <a
                           href={course.link}

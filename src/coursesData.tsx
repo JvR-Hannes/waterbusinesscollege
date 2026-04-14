@@ -6,6 +6,8 @@ type Course = {
   image: string;
   category: string;
   href: string;
+  /** When true, CTA shows "Temporarily Unavailable" (outline style, not a link). */
+  temporarilyUnavailable?: boolean;
 };
 
 export const courses: Course[] = [
@@ -23,6 +25,7 @@ export const courses: Course[] = [
     image: "/images/courses/waterreticulation.png",
     category: "Occupational Qualifications",
     href: "/courses/occupational-qualifications",
+    temporarilyUnavailable: true,
   },
   {
     title: "Self-Study Foundation Courses",

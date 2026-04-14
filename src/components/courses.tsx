@@ -15,6 +15,7 @@ export default function Courses() {
               description={course.description}
               imageUrl={course.image}
               href={course.href}
+              temporarilyUnavailable={course.temporarilyUnavailable}
             />
           ))}
         </div>

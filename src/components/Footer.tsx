@@ -34,10 +34,6 @@ export default function Footer() {
             </a>
           </p>
           <p className="mb-2">Phone: +27 (0)81 727 9793</p>
-          <p className="mt-2">Offices H4,<br />
-            The Willows Office Park,<br />
-            559 Farm Road,<br />
-            Die Wilgers, Pretoria</p>
         </div>
         <div className="flex mt-20">
           <a

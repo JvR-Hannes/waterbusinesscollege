@@ -11,6 +11,15 @@ export type Course = {
   requiresQualificationApplication?: boolean;
 };
 
+const PORTAL_BASE_URL = "https://portal.waterbusinesscollege.co.za";
+const PORTAL_CART_URL = `${PORTAL_BASE_URL}/cart-2/`;
+
+function buildPortalPurchaseLink(productId: number): string {
+  return `${PORTAL_BASE_URL}/?add-to-cart=${productId}&redirect_to=${encodeURIComponent(
+    PORTAL_CART_URL
+  )}`;
+}
+
 export const fullCourses: Course[] = [
   {
     title: "Module 1: Workplace Fundamentals – NQF L4",
@@ -18,7 +27,7 @@ export const fullCourses: Course[] = [
     description:
       "Gain essential workplace knowledge including communication, ethics, and numeracy.",
     price: "R2600.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1057&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
+    link: buildPortalPurchaseLink(1057),
     category: "Qualifications",
     requiresQualificationApplication: true,
   },
@@ -29,7 +38,7 @@ export const fullCourses: Course[] = [
     description:
       "Develop hands-on skills for water infrastructure installation and maintenance.",
     price: "R3100.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1222&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
+    link: buildPortalPurchaseLink(1222),
     category: "Qualifications",
     requiresQualificationApplication: true,
   },
@@ -39,7 +48,7 @@ export const fullCourses: Course[] = [
     description:
       "Develop hands-on skills for water infrastructure installation and maintenance.",
     price: "R2600.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1221&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
+    link: buildPortalPurchaseLink(1221),
     category: "Qualifications",
     requiresQualificationApplication: true,
   },
@@ -49,7 +58,7 @@ export const fullCourses: Course[] = [
     description:
       "Develop hands-on skills for water infrastructure installation and maintenance.",
     price: "R2600.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1220&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
+    link: buildPortalPurchaseLink(1220),
     category: "Qualifications",
     requiresQualificationApplication: true,
   },
@@ -58,7 +67,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/surfacewater.png",
     description: "",
     price: "R2500.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=1453&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
+    link: buildPortalPurchaseLink(1453),
     category: "Short Courses",
   },
   {
@@ -66,7 +75,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/surfacewater.png",
     description: "",
     price: "R350.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=7336&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
+    link: buildPortalPurchaseLink(7336),
     category: "Short Courses",
     requiresStudentDiscountApplication: true,
   },
@@ -76,7 +85,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/ARD.png",
     description: "",
     price: "R2500.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=3741&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
+    link: buildPortalPurchaseLink(3741),
     category: "DIY Courses",
   },
   {
@@ -85,7 +94,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/ARD.png",
     description: "",
     price: "R350.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=7383&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
+    link: buildPortalPurchaseLink(7383),
     category: "DIY Courses",
     requiresStudentDiscountApplication: true,
   },
@@ -94,7 +103,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/centrifugal.png",
     description: "",
     price: "R2500.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=7140&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
+    link: buildPortalPurchaseLink(7140),
     category: "DIY Courses",
   },
   {
@@ -102,7 +111,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/centrifugal.png",
     description: "Student",
     price: "R350.00",
-    link: "https://portal.waterbusinesscollege.co.za/?add-to-cart=7124&redirect_to=https://portal.waterbusinesscollege.co.za/cart/",
+    link: buildPortalPurchaseLink(7124),
     category: "DIY Courses",
     requiresStudentDiscountApplication: true,
   },

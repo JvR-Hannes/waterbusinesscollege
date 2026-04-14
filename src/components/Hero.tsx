@@ -13,22 +13,44 @@ export default function Hero() {
             <span className="text-white">WATER BUSINESS COLLEGE</span>
           </h1>
           <p className="text-base text-gray-100 font-small">
-            <strong>Water Business College (WBC) is an accredited
-            Skills Development Provider<br /> (QCTO Accreditation Number: QCTOSDP01200724-2088).</strong>
+            <strong>
+              Water Business College (WBC) delivers industry-aligned skills
+              programmes / courses for the water sector.
+            </strong>
           </p>
           <p className="text-base text-gray-100 font-small">
-            <strong>WBC aims to contribute to the development of skills
-            and capacity in the water<br /> sector through occupational
-            qualifications and skills training programmes.</strong>
+            <strong>
+              We are developing a Personalised, Flexible and an Affordable
+              Learning Environment for the learner.
+            </strong>
           </p>
           <p className="text-base text-gray-100 font-small">
-            <strong>Developing Centre of Excellence contributing to the improvement of water<br /> management.<br />
-            We are creating a Personalised,
-            Flexible and an Affordable Learning Environment<br /> for the learner.</strong>
+            <strong>
+              Our bespoke Learner Management System (LMS) offers learners a
+              personalised, accessible and flexible 24/7 learning environment.
+            </strong>
           </p>
           <p className="text-base text-gray-100 font-small">
-            <strong>Our training programmes are Employer Friendly. <br />
-            WBC is applying for CPD accreditation for relevant courses.</strong>
+            <strong>
+              Our Modular Pay-As-You-Learn (MPAYL) model makes training
+              affordable.
+            </strong>
+          </p>
+          <p className="text-base text-gray-100 font-small">
+            <strong>
+              Our employer-friendly courses are designed to integrate with
+              workplace responsibilities and industry requirements.
+            </strong>
+          </p>
+          <p className="text-base text-gray-100 font-small">
+            <strong>
+              Our programmes support technical staff, younger professionals,
+              senior and post-graduate students and new entrants to the water
+              sector.
+            </strong>
+          </p>
+          <p className="text-base text-gray-100 font-small">
+            <strong>Short courses are CPD-accredited.</strong>
           </p>
 
           {/* Buttons */}

@@ -17,7 +17,7 @@ export default function Footer() {
             />
           </div>
           <p className="text-white/90 text-base text-xl">
-            Water Business College (WBC) is an accredited Skills Development Provider (SDP) implementing occupational qualifications in the water and related engineering sectors.
+            Water Business College (WBC) offers industry-aligned skills courses that are CPD-accredited.
           </p>
         </div>
 

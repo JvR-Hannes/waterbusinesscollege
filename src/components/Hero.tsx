@@ -8,50 +8,52 @@ export default function Hero() {
     >
       <div className="relative z-10 container mx-auto px-4 py-10 flex flex-col md:flex-row items-center min-h-[60vh]">
         {/* Left Column - Text Content */}
-        <div className="w-full md:w-1/2 space-y-4">
+        <div className="w-full md:w-1/2 min-w-0 space-y-4 break-words">
           <h1 className="text-10xl md:text-6xl font-extrabold text-white leading-tight font-[var(--font-raleway)]">
             <span className="text-white">WATER BUSINESS COLLEGE</span>
           </h1>
-          <p className="text-base text-gray-100 font-small">
-            <strong>
-              Water Business College (WBC) delivers industry-aligned skills
-              programmes / courses for the water sector.
-            </strong>
-          </p>
-          <p className="text-base text-gray-100 font-small">
-            <strong>
-              We are developing a Personalised, Flexible and an Affordable
-              Learning Environment for the learner.
-            </strong>
-          </p>
-          <p className="text-base text-gray-100 font-small">
-            <strong>
-              Our bespoke Learner Management System (LMS) offers learners a
-              personalised, accessible and flexible 24/7 learning environment.
-            </strong>
-          </p>
-          <p className="text-base text-gray-100 font-small">
-            <strong>
-              Our Modular Pay-As-You-Learn (MPAYL) model makes training
-              affordable.
-            </strong>
-          </p>
-          <p className="text-base text-gray-100 font-small">
-            <strong>
-              Our employer-friendly courses are designed to integrate with
-              workplace responsibilities and industry requirements.
-            </strong>
-          </p>
-          <p className="text-base text-gray-100 font-small">
-            <strong>
-              Our programmes support technical staff, younger professionals,
-              senior and post-graduate students and new entrants to the water
-              sector.
-            </strong>
-          </p>
-          <p className="text-base text-gray-100 font-small">
-            <strong>Short courses are CPD-accredited.</strong>
-          </p>
+          <div className="max-w-prose space-y-4">
+            <p className="text-base text-gray-100 font-small">
+              <strong>
+                Water Business College (WBC) delivers industry-aligned skills
+                programmes / courses for the water sector.
+              </strong>
+            </p>
+            <p className="text-base text-gray-100 font-small">
+              <strong>
+                We are developing a Personalised, Flexible and an Affordable
+                Learning Environment for the learner.
+              </strong>
+            </p>
+            <p className="text-base text-gray-100 font-small">
+              <strong>
+                Our bespoke Learner Management System (LMS) offers learners a
+                personalised, accessible and flexible 24/7 learning environment.
+              </strong>
+            </p>
+            <p className="text-base text-gray-100 font-small">
+              <strong>
+                Our Modular Pay-As-You-Learn (MPAYL) model makes training
+                affordable.
+              </strong>
+            </p>
+            <p className="text-base text-gray-100 font-small">
+              <strong>
+                Our employer-friendly courses are designed to integrate with
+                workplace responsibilities and industry requirements.
+              </strong>
+            </p>
+            <p className="text-base text-gray-100 font-small">
+              <strong>
+                Our programmes support technical staff, younger professionals,
+                senior and post-graduate students and new entrants to the water
+                sector.
+              </strong>
+            </p>
+            <p className="text-base text-gray-100 font-small">
+              <strong>Short courses are CPD-accredited.</strong>
+            </p>
+          </div>
 
           {/* Buttons */}
           <div className="flex flex-wrap gap-4 pt-2">

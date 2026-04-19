@@ -56,7 +56,7 @@ export const courses: Course[] = [
         </p>
       </>
     ),
-    image: "/images/courses/shortcourse.png",
+    image: "/images/courses/online-short-courses.png",
     category: "Short Courses",
     href: "/courses/short-courses",
   },

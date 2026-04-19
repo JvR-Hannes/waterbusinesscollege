@@ -32,7 +32,7 @@ const mockCourses = [
     title: " ",
     description: (
       <p>
-        The Introduction to Basic Theory on Pumps (Centrigual Pumps) DIY course
+        The Introduction to Basic Theory on Pumps DIY course
         focusses on the naming of pumps, pumping rates, suction and pressure
         head, pump curves, pump selection, pumps in parallel and in series and
         system curves.
@@ -50,7 +50,7 @@ const mockCourses = [
         <br />
       </p>
     ),
-    imageUrl: "/images/courses/diyIntro.png",
+    imageUrl: "/images/courses/basic-theory-on-pumps.png",
     href: "/courses/modules/diypumps", // or the actual course detail path if available
   },
 ];

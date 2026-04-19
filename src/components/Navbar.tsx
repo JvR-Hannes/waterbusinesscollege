@@ -51,6 +51,7 @@ const navLinks = [
     label: "WBC Programs Overview",
     href: "#",
     submenu: [
+      { label: "ECSA CPD Accreditation", href: "/ecsa-cpd-accreditation" },
       { label: "QCTO Accreditation Letter", href: "/qcto-accreditation-letter" },
       { label: "WBC Overview", href: "/overview-of-the-water-reticulation-qualification-nqf-04-2" },
       { label: "Water Reticulation Practitioner Qualification (NQF Level 4)", href: "/overview-of-the-water-reticulation-qualification-nqf-04" },

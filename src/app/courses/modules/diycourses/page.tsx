@@ -7,7 +7,7 @@ export default function DiyCourses() {
 
       <div className="aspect-w-16 aspect-h-9 w-full max-w-5xl mx-auto mb-10">
         <iframe
-          src="/pdfs/waste.pdf#toolbar=0&navpanes=0&scrollbar=0"
+          src="/pdfs/diy-course-waste.pdf#toolbar=0&navpanes=0&scrollbar=0"
           className="w-full h-[80vh] border rounded shadow-lg"
           title="DIY Courses PDF Viewer"
         />

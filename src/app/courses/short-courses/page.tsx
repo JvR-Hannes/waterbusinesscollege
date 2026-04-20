@@ -16,7 +16,7 @@ const mockCourses = [
         </ul>
       </>
     ),
-    imageUrl: "/images/courses/online-short-courses.png",
+    imageUrl: "/images/courses/short.png",
     href: "/courses/modules/shortcourses", // or the actual course detail path if available
   },
 ];

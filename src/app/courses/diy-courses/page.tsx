@@ -31,7 +31,7 @@ const mockCourses = [
     description: (
       <>
         <p>
-          This online DIY / self-assessment course focusses on the naming of
+          This <strong>online DIY / self-assessment course</strong> focusses on the naming of
           pumps, pumping rates, suction and pressure head, pump curves, pump
           selection, pumps in parallel and in series and an introduction to
           system curves.

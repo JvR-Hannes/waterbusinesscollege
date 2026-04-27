@@ -30,8 +30,8 @@ const CourseCard = ({
         : "w-[350px] hover:w-[720px] h-[400px]"
       }`}>
       {/* Card Background & Content */}
-      <div className="absolute rounded-2xl inset-0 z-20 flex flex-col justify-center px-9 py-9 transition-all duration-500 text-white-900 group-hover:bg-[#3e64de] group-hover:text-white">
-        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 p-6 pr-55 text-left">
+      <div className="absolute rounded-2xl inset-0 z-20 flex flex-col justify-center px-6 py-6 transition-all duration-500 text-white-900 group-hover:bg-[#3e64de] group-hover:text-white">
+        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 py-4 pl-4 pr-55 text-left">
           <h3 className="text-2xl text-white-900 mb-6 mt-3">
             <span className="text-white">{title}</span>
           </h3>

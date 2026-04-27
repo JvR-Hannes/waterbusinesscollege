@@ -12,15 +12,24 @@ type Course = {
 
 export const courses: Course[] = [
   {
-    title: "Water Reticulation Practitioner (NQF Level 4)", /*Adjust the brackets*/
+    title: "Water Reticulation Practitioner (NQF Level 04)",
     description: (
-      <p>
-        This qualification is designed for individuals aiming to install, operate,
-        and maintain water supply infrastructure.
-        <br />It&apos;s suitable for technical staff
-        seeking formal recognition of their experience and for newcomers entering
-        the water sector.
-      </p>
+      <>
+        <p>
+          This qualification is designed for individuals aiming to install, operate,
+          and maintain water supply infrastructure.
+        </p>
+        <p>
+          It&apos;s suitable for technical staff seeking formal recognition for their
+          relevant experience and for young persons&apos; / scholars entering the water
+          sector.
+        </p>
+        <p>
+          A Water Reticulation Practitioner installs, operates and maintains the water
+          reticulation / water supply infrastructure and manages a water reticulation
+          team.
+        </p>
+      </>
     ),
     image: "/images/courses/waterreticulation.png",
     category: "Occupational Qualifications",
@@ -30,30 +39,44 @@ export const courses: Course[] = [
   {
     title: "Self-Study Foundation Courses",
     description: (
-      <p>
-        The <strong>Foundation Courses</strong> (i.e. Basic Mathematics, Basic Chemistry, etc.) prepare
-        learners for the occupational qualifications.
-        <br />
-        Scholars (High School Students) can use the Foundation Courses for revision.
-      </p>
+      <>
+        <p>
+          Water Business College (WBC) is developing online self-assessment Foundation
+          Courses (i.e. Basic Mathematics, Basic Chemistry, etc.) to prepare technical
+          staff / younger practitioners for entry-level occupational qualifications.
+        </p>
+        <p>
+          Scholars (High School Students) can use the Foundation Courses for revision.
+        </p>
+        <p>
+          These low fee courses are available 24/7 on the WBC LMS and the learner /
+          participant can start at any time.
+        </p>
+      </>
     ),
     image: "/images/courses/foundation.png",
     category: "Foundation Courses",
     href: "/courses/foundation-courses",
   },
   {
-    title: "Short Courses",
+    title: "Online Short Courses",
     description: (
       <>
         <p>
-          Water Business College (WBC) is offering several short courses (1-day and
-          3-day short courses) on water resource management that were previously
-          accredited for <strong>Continuing Professional Development (CPD)</strong>{" "}
-          points by the Engineering Council of South Africa (ECSA) and the{" "}
-          <strong>South African Council for Natural Scientific Professions (SACNASP)</strong>.
-          The accreditation for the short courses will be renewed. The short courses
-          will be delivered online and in-person.
+          Water Business College (WBC) is developing short courses for the water
+          sector.
         </p>
+        <p>
+          The short courses are accredited by the Engineering Council of South Africa
+          (ECSA) and/or the South African Council for Natural Scientific Professions
+          (SACNASP) for Continuing Professional Development (CPD) points.
+        </p>
+        <p>The short courses will be delivered online (in various formats).</p>
+        <p>
+          The course material is available 24/7 on the WBC LMS and the learner /
+          participant can start at any time.
+        </p>
+        <p>Significantly reduced course fees for tertiary students.</p>
       </>
     ),
     image: "/images/courses/online-short-courses.png",
@@ -65,22 +88,23 @@ export const courses: Course[] = [
     description: (
       <>
         <p>
-          The <strong>Do-It-Yourself (DIY) courses</strong> focus on applied methods
-          to conduct industry-specific tasks and activities, including courses on
-          municipal water supply systems, and on the classification and ARD/ABA
-          assessment of waste materials (incl. mine wastes), etc.
+          The Do-It-Yourself (DIY) courses focus on applied topics as well as on
+          methods to conduct industry-specific tasks / activities, and include courses
+          on municipal water supply systems, mine water management, etc.
         </p>
-        <p>The DIY courses are available 24/7 and are ideal for:</p>
-        <ul className="list-decimal list-inside ml-1">
-          <li>
-            <strong>Technicians, Younger practitioners</strong> and{" "}
-            <strong>Senior and post-graduate students</strong> in the water, related
-            engineering, environmental and science disciplines
-          </li>
-          <li>
-            <strong>Scholars</strong> reviewing math, hydraulics, and more
-          </li>
-        </ul>
+        <p>
+          ECSA and/or SACNASP accreditation for Continuing Professional Development
+          (CPD) points.
+        </p>
+        <p>
+          Courses are available 24/7 on the WBC LMS and the learner / participant can
+          start at any time.
+        </p>
+        <p>
+          Target audiences: Technicians, Younger practitioners and Senior and
+          post-graduate students.
+        </p>
+        <p>Significantly reduced course fees for tertiary students.</p>
       </>
     ),
     image: "/images/courses/diy.png",

@@ -4,26 +4,24 @@ const mockCourses = [
   {
     title: " ",
     description: (
-      <p>
-        The focus of the online DIY course is on methodology, i.e. how to
-        conduct a Waste Classification and an Acid Rock Drainage (ARD / ABA)
-        Assessment of mine residue deposits / waste material. Target audiences:
-        Technicians, Younger practitioners and Senior and post-graduate students
-        in the water resources, engineering, environmental and science
-        disciplines.
-        {
-          "Case Study: Platinum Group Minerals (PGM's) in the Bushveld Igneous Complex (BIC)."
-        }
-        <br />
-        <br />
-        The DIY courses are available 24/7 and the learner / participant can
-        start at any time once registered!
-        <br />
-        <br />
-        DELIVERED ONLINE
-        <br />
-        <br />
-      </p>
+      <>
+        <p>
+          The focus of the online DIY / self-assessment course is on
+          methodology, i.e. how to conduct a Waste Classification and an Acid Rock
+          Drainage (ARD / ABA) Assessment of mine residue deposits / waste
+          material.
+        </p>
+        <p>
+          Target audiences: Technicians, Younger practitioners and Senior and
+          post-graduate students in the water resources as well as related
+          engineering, environmental and related science disciplines.
+        </p>
+        <p>
+          Case Study: Platinum Group Minerals (PGM&apos;s) in the Bushveld
+          Igneous Complex (BIC).
+        </p>
+        <p>ECSA Accreditation – 2 CPD Points</p>
+      </>
     ),
     imageUrl: "/images/courses/waste.png",
     href: "/courses/modules/diycourses", // or the actual course detail path if available
@@ -31,24 +29,21 @@ const mockCourses = [
   {
     title: " ",
     description: (
-      <p>
-        The Introduction to Basic Theory on Pumps DIY course
-        focusses on the naming of pumps, pumping rates, suction and pressure
-        head, pump curves, pump selection, pumps in parallel and in series and
-        system curves.
-        <br />
-        <br />
-        The DIY course contains informative videos.
-        <br />
-        <br />
-        The DIY courses are available 24/7 and the learner / participant can
-        start at any time once registered!
-        <br />
-        <br />
-        DELIVERED ONLINE
-        <br />
-        <br />
-      </p>
+      <>
+        <p>
+          This online DIY / self-assessment course focusses on the naming of
+          pumps, pumping rates, suction and pressure head, pump curves, pump
+          selection, pumps in parallel and in series and an introduction to
+          system curves.
+        </p>
+        <p>The DIY course contains informative videos.</p>
+        <p>
+          Target audiences: Technicians, Younger practitioners and Senior and
+          post-graduate students in the water, civil engineering, environmental
+          and related science disciplines.
+        </p>
+        <p>ECSA Accreditation – 3 CPD Points</p>
+      </>
     ),
     imageUrl: "/images/courses/basic-theory-on-pumps.png",
     href: "/courses/modules/diypumps", // or the actual course detail path if available

@@ -14,6 +14,8 @@ const mockCourses = [
           <li>Governing legislation - Management of surface water in the mining context</li>
           <li>The importance of GIS in hydrological assessments</li>
         </ul>
+        <br />
+        <p>ECSA Accreditation – 1 CPD Point</p>
       </>
     ),
     imageUrl: "/images/courses/short.png",

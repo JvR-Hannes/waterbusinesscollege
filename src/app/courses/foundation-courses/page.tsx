@@ -4,11 +4,20 @@ const mockCourses = [
   {
     title: "642605001-KM-01 // Module 1 // NQF 4 (CREDITS: 5)",
     description: (
-      <p>
-        The Introduction to Mathematics self-study course focusses on.
-        <br />
-        Learner material is available 24/7 online on our LMS.
-      </p>
+      <>
+        <p>
+          This online Introduction to Basic Mathematics self-assessment course
+          focusses on exponents; scientific notation; dimensional analyses;
+          rounding and estimation; solving equations and for unknown values;
+          ratios and proportions; calculating averages and percentage; linear,
+          area and volume measurements; graphs, etc.
+        </p>
+        <p>
+          Target audiences: Technical staff enrolling for entry-level
+          occupational qualifications and High School Students looking to review
+          basic mathematical concepts.
+        </p>
+      </>
     ),
     imageUrl: "/images/courses/math.png",
     href: "#", // or the actual course detail path if available

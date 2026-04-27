@@ -6,15 +6,15 @@ const mockCourses = [
     description: (
       <>
         <p>
-          This online Introduction to Basic Mathematics self-assessment course
+          This <strong>online Introduction to Basic Mathematics self-assessment course</strong>
           focusses on exponents; scientific notation; dimensional analyses;
           rounding and estimation; solving equations and for unknown values;
           ratios and proportions; calculating averages and percentage; linear,
           area and volume measurements; graphs, etc.
         </p>
         <p>
-          Target audiences: Technical staff enrolling for entry-level
-          occupational qualifications and High School Students looking to review
+          Target audiences: <strong>Technical staff</strong> enrolling for entry-level
+          occupational qualifications and <strong>High School Students</strong> looking to review
           basic mathematical concepts.
         </p>
       </>

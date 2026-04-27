@@ -6,21 +6,21 @@ const mockCourses = [
     description: (
       <>
         <p>
-          The focus of the online DIY / self-assessment course is on
+          The focus of the <strong>online DIY / self-assessment course</strong> is on
           methodology, i.e. how to conduct a Waste Classification and an Acid Rock
           Drainage (ARD / ABA) Assessment of mine residue deposits / waste
           material.
         </p>
         <p>
-          Target audiences: Technicians, Younger practitioners and Senior and
-          post-graduate students in the water resources as well as related
+          Target audiences: <strong>Technicians</strong>, <strong>Younger practitioners</strong> and <strong>Senior</strong> and
+          <strong>post-graduate students</strong> in the water resources as well as related
           engineering, environmental and related science disciplines.
         </p>
         <p>
           Case Study: Platinum Group Minerals (PGM&apos;s) in the Bushveld
           Igneous Complex (BIC).
         </p>
-        <p>ECSA Accreditation – 2 CPD Points</p>
+        <p><strong>ECSA Accreditation – 2 CPD Points</strong></p>
       </>
     ),
     imageUrl: "/images/courses/waste.png",
@@ -38,11 +38,11 @@ const mockCourses = [
         </p>
         <p>The DIY course contains informative videos.</p>
         <p>
-          Target audiences: Technicians, Younger practitioners and Senior and
-          post-graduate students in the water, civil engineering, environmental
+          Target audiences: <strong>Technicians</strong>, <strong>Younger practitioners</strong> and <strong>Senior</strong> and
+          <strong>post-graduate students</strong> in the water, civil engineering, environmental
           and related science disciplines.
         </p>
-        <p>ECSA Accreditation – 3 CPD Points</p>
+        <p><strong>ECSA Accreditation – 3 CPD Points</strong></p>
       </>
     ),
     imageUrl: "/images/courses/basic-theory-on-pumps.png",

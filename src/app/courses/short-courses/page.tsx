@@ -15,7 +15,7 @@ const mockCourses = [
           <li>The importance of GIS in hydrological assessments</li>
         </ul>
         <br />
-        <p>ECSA Accreditation – 1 CPD Point</p>
+        <p><strong>ECSA Accreditation – 1 CPD Point</strong></p>
       </>
     ),
     imageUrl: "/images/courses/short.png",

@@ -6,7 +6,7 @@ const mockCourses = [
     description: (
       <>
         <p>
-          This <strong>online Introduction to Basic Mathematics self-assessment course</strong>
+          This <strong>online Introduction to Basic Mathematics self-assessment course</strong>{" "}
           focusses on exponents; scientific notation; dimensional analyses;
           rounding and estimation; solving equations and for unknown values;
           ratios and proportions; calculating averages and percentage; linear,

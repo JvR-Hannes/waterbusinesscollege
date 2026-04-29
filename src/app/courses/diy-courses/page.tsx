@@ -12,8 +12,8 @@ const mockCourses = [
           material.
         </p>
         <p>
-          Target audiences: <strong>Technicians</strong>, <strong>Younger practitioners</strong> and <strong>Senior</strong> and
-          <strong>post-graduate students</strong> in the water resources as well as related
+          Target audiences: <strong>Technicians</strong>, <strong>Younger practitioners</strong> and{" "}
+          <strong>Senior</strong> and <strong>post-graduate students</strong> in the water resources as well as related
           engineering, environmental and related science disciplines.
         </p>
         <p>
@@ -38,8 +38,8 @@ const mockCourses = [
         </p>
         <p>The DIY course contains informative videos.</p>
         <p>
-          Target audiences: <strong>Technicians</strong>, <strong>Younger practitioners</strong> and <strong>Senior</strong> and
-          <strong>post-graduate students</strong> in the water, civil engineering, environmental
+          Target audiences: <strong>Technicians</strong>, <strong>Younger practitioners</strong> and{" "}
+          <strong>Senior</strong> and <strong>post-graduate students</strong> in the water, civil engineering, environmental
           and related science disciplines.
         </p>
         <p><strong>ECSA Accreditation – 3 CPD Points</strong></p>
@@ -55,7 +55,7 @@ export default function DiyCourses() {
     <main className="bg-white py-16 min-h-screen">
       <div className="container mx-auto px-4 align-center">
         <h1 className="text-3xl font-bold mb-12 text-center">DIY Courses</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 text-sm justify-items-center gap-y-12 pb-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-y-12 pb-6 mb-12">
           {mockCourses.map((course, index) => (
             <CourseCard
               key={index}

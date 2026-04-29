@@ -16,13 +16,13 @@ export default function Hero() {
             <p className="text-base text-gray-100 font-small">
               <strong>
                 Water Business College (WBC) delivers industry-aligned skills
-                programmes / courses for the water sector.
+                programmes / <br />courses for the water sector.
               </strong>
             </p>
             <p className="text-base text-gray-100 font-small">
               <strong>
                 We are developing a Personalised, Flexible and an Affordable
-                Learning Environment for the learner.
+                Learning Environment <br />for the learner.
               </strong>
             </p>
             <p className="text-base text-gray-100 font-small">
@@ -40,7 +40,7 @@ export default function Hero() {
             <p className="text-base text-gray-100 font-small">
               <strong>
                 Our employer-friendly courses are designed to integrate with
-                workplace responsibilities and industry requirements.
+                workplace <br/>responsibilities and industry requirements.
               </strong>
             </p>
             <p className="text-base text-gray-100 font-small">

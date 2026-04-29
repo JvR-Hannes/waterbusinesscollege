@@ -30,18 +30,18 @@ const CourseCard = ({
         : "w-[350px] hover:w-[720px] h-[400px]"
       }`}>
       {/* Card Background & Content */}
-      <div className="absolute rounded-2xl inset-0 z-20 flex flex-col justify-center px-6 py-6 transition-all duration-500 text-white-900 group-hover:bg-[#3e64de] group-hover:text-white">
+      <div className="absolute rounded-2xl inset-0 z-20 flex flex-col justify-center px-6 py-6 text-base transition-all duration-500 text-white-900 group-hover:bg-[#3e64de] group-hover:text-white">
         <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 py-4 pl-4 pr-55 text-left">
-          <h3 className="text-2xl text-white-900 mb-6 mt-3">
+          <h3 className="text-2xl leading-snug text-white-900 mb-6 mt-3">
             <span className="text-white">{title}</span>
           </h3>
-          <div className="text-md text-white-700 line-clamp-20 mb-3 mt-3">
+          <div className="text-base leading-normal text-white-700 line-clamp-20 mb-3 mt-3 [&_p]:text-base [&_li]:text-base [&_ul]:text-base">
             {description}
           </div>
 
           {temporarilyUnavailable ? (
             <span
-              className="mt-2 mb-2 inline-block rounded border border-red-600 bg-white px-4 py-2 text-sm font-semibold text-red-600 shadow-sm"
+              className="mt-2 mb-2 inline-block rounded border border-red-600 bg-white px-4 py-2 text-base font-semibold text-red-600 shadow-sm"
               role="status"
             >
               Temporarily Unavailable
@@ -50,7 +50,7 @@ const CourseCard = ({
             href && (
               <Link
                 href={href}
-                className="inline-block mt-2 mb-2 px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded transition"
+                className="inline-block mt-2 mb-2 px-4 py-2 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded transition"
               >
                 {buttonText || "View The Courses"}
               </Link>

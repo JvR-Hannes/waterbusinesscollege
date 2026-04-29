@@ -106,7 +106,7 @@ export default function OccupationalQualifications() {
     <main className="bg-white py-16 min-h-screen">
       <div className="container mx-auto px-4 align-center">
         <h1 className="text-3xl font-bold mb-8 mt-8 text-center">Qualifications</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-y-14 mt-8 mb-8">
+        <div className="grid grid-cols-1 justify-items-center gap-x-8 gap-y-16 md:grid-cols-2 md:gap-x-12 md:gap-y-24 mt-8 mb-8">
           {mockCourses.map((course, index) => (
             <CourseCard
               key={index}

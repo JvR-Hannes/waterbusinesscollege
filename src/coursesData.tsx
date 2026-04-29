@@ -88,7 +88,7 @@ export const courses: Course[] = [
     description: (
       <>
         <p>
-          The Do-It-Yourself (DIY) courses focus on applied topics as well as on
+          The Do-It-Yourself (DIY) courses focus on applied topics as <br />well as on
           methods to conduct industry-specific tasks / activities, and include courses
           on municipal water supply systems, mine water management, etc.
         </p>

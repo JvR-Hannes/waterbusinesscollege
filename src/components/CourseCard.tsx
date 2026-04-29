@@ -25,37 +25,50 @@ const CourseCard = ({
   temporarilyUnavailable,
 }: Props) => {
   return (
-    <div className={`relative group mx-auto p-8 space-y-4 transition-all duration-500 ease-in-out overflow-visible ${customStyles ? customStyles : variant === "large"
-        ? "w-[410px] md:w-[720px] h-[410px]"
-        : "w-[350px] hover:w-[720px] h-[400px]"
-      }`}>
+    <div
+      className={`relative z-0 overflow-visible transition-[width,z-index] duration-500 ease-in-out group mx-auto my-6 p-3 sm:p-4 md:p-5 hover:z-30 ${customStyles ? customStyles : variant === "large"
+        ? "w-[410px] md:w-[720px] h-[430px] md:h-[440px]"
+        : "w-[350px] hover:w-[720px] h-[420px] md:h-[430px]"
+      }`}
+    >
       {/* Card Background & Content */}
-      <div className="absolute rounded-2xl inset-0 z-20 flex flex-col justify-center px-6 py-6 text-base transition-all duration-500 text-white-900 group-hover:bg-[#3e64de] group-hover:text-white">
-        <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-500 py-4 pl-4 pr-55 text-left">
-          <h3 className="text-2xl leading-snug text-white-900 mb-6 mt-3">
-            <span className="text-white">{title}</span>
-          </h3>
-          <div className="text-base leading-normal text-white-700 line-clamp-20 mb-3 mt-3 [&_p]:text-base [&_li]:text-base [&_ul]:text-base">
-            {description}
-          </div>
-
-          {temporarilyUnavailable ? (
-            <span
-              className="mt-2 mb-2 inline-block rounded border border-red-600 bg-white px-4 py-2 text-base font-semibold text-red-600 shadow-sm"
-              role="status"
-            >
-              Temporarily Unavailable
-            </span>
-          ) : (
-            href && (
-              <Link
-                href={href}
-                className="inline-block mt-2 mb-2 px-4 py-2 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded transition"
+      <div className="absolute inset-0 z-20 flex min-h-0 flex-col overflow-hidden rounded-2xl text-base transition-all duration-500 text-white-900 group-hover:bg-[#3e64de] group-hover:text-white">
+        <div className="flex h-full min-h-0 flex-col opacity-0 transition-opacity duration-500 group-hover:opacity-100">
+          <div className="flex h-full min-h-0 flex-col px-5 py-5 sm:px-7 sm:py-6">
+            <div className="flex h-full min-h-0 w-full max-w-[30rem] flex-col text-left">
+              <h3 className="mb-3 shrink-0 text-2xl leading-snug text-white-900">
+                <span className="text-white">{title}</span>
+              </h3>
+              <div
+                className={`mb-3 overflow-hidden text-base leading-relaxed text-white-700 group-hover:text-white/95 [&_li]:mb-1 [&_p]:mb-2 [&_p:last-child]:mb-0 [&_ul]:mt-1 [&_ul]:space-y-1 [&_p]:text-base [&_li]:text-base [&_ul]:text-base ${
+                  variant === "large"
+                    ? "line-clamp-[12] md:line-clamp-[15]"
+                    : "line-clamp-[9] md:line-clamp-[11]"
+                }`}
               >
-                {buttonText || "View The Courses"}
-              </Link>
-            )
-          )}
+                {description}
+              </div>
+              <div className="shrink-0 pt-1">
+                {temporarilyUnavailable ? (
+                  <span
+                    className="inline-block rounded border border-red-600 bg-white px-5 py-2.5 text-base font-semibold text-red-600 shadow-sm"
+                    role="status"
+                  >
+                    Temporarily Unavailable
+                  </span>
+                ) : (
+                  href && (
+                    <Link
+                      href={href}
+                      className="inline-block rounded px-5 py-2.5 text-base font-medium text-white bg-blue-600 transition hover:bg-blue-700"
+                    >
+                      {buttonText || "View The Courses"}
+                    </Link>
+                  )
+                )}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 

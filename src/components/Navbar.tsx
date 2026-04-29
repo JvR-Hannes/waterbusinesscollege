@@ -87,29 +87,37 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav ref={navRef} className="bg-white shadow-md text-xl font-medium text-[#2E528E] px-12 py-6">
-      <div className="container mx-auto flex justify-between items-center">
+    <nav
+      ref={navRef}
+      className="bg-white text-[#2E528E] shadow-md w-full"
+    >
+      <div className="mx-auto flex max-w-7xl flex-col px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between gap-4 py-3 sm:py-4">
+          {/* Logo: height capped via className so the bar stays compact */}
+          <Link href="/" className="relative flex shrink-0 items-center">
+            <Image
+              src="/images/wbc-main.png"
+              alt="Water Business College"
+              width={240}
+              height={72}
+              className="h-10 w-auto sm:h-11 md:h-12"
+              priority
+            />
+          </Link>
 
-        {/* Logo */}
-        <Link href="/" className="flex items-center gap-6">
-          <Image 
-            src="/images/wbc-main.png" // Replace with your logo path
-            alt="Logo"
-            width={150} // Adjust logo size
-            height={150} // Adjust logo size
-          />
-        </Link>
+          {/* Hamburger for mobile */}
+          <button
+            type="button"
+            className="-mr-1 inline-flex rounded-md p-2 text-[#2E528E] md:hidden hover:bg-gray-100"
+            aria-expanded={mobileOpen}
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            onClick={() => setMobileOpen((prev) => !prev)}
+          >
+            {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
 
-        {/* Hamburger for mobile */}
-        <button
-          className="md:hidden"
-          onClick={() => setMobileOpen((prev) => !prev)}
-        >
-          {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
-
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6">
+          {/* Desktop Menu */}
+          <ul className="hidden min-w-0 flex-1 md:flex md:flex-wrap md:items-center md:justify-end md:gap-x-3 md:gap-y-2 lg:gap-x-4 text-sm font-medium lg:text-base">
           {navLinks.map((item, index) => (
             <li
               key={index}
@@ -134,7 +142,7 @@ export default function Navbar() {
               </Link>
 
               {item.submenu && openMenu === index && (
-                <ul className="absolute left-0 top-full mt-2 bg-white border rounded-lg shadow-md w-64 z-1000">
+                <ul className="absolute left-0 top-full z-50 mt-2 w-72 max-w-[calc(100vw-2rem)] rounded-lg border bg-white text-sm shadow-md">
                   {item.submenu.map((sub, subIndex) => (
                     <li key={subIndex}>
                       <Link
@@ -149,41 +157,42 @@ export default function Navbar() {
               )}
             </li>
           ))}
-        </ul>
-      </div>
+          </ul>
+        </div>
 
-      {/* Mobile Dropdown Menu */}
-      {mobileOpen && (
-        <ul className="md:hidden mt-4 space-y-4">
-          {navLinks.map((item, index) => (
-            <li key={index}>
-              <div
-                className="flex justify-between items-center"
-                onClick={() => setOpenMenu(openMenu === index ? null : index)}
-              >
-                <Link href={item.href} className="block py-2 text-gray-700">
-                  {item.label}
-                </Link>
-                {item.submenu && <ChevronDown className="w-4 h-4" />}
-              </div>
-              {item.submenu && openMenu === index && (
-                <ul className="pl-4 mt-2 space-y-2">
-                  {item.submenu.map((sub, subIndex) => (
-                    <li key={subIndex}>
-                      <Link
-                        href={sub.href}
-                        className="block py-1 text-gray-600"
-                      >
-                        {sub.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              )}
-            </li>
-          ))}
-        </ul>
-      )}
+        {/* Mobile menu */}
+        {mobileOpen ? (
+          <ul className="border-t border-gray-100 pb-4 pt-3 text-base font-medium md:hidden">
+            {navLinks.map((item, index) => (
+              <li key={index}>
+                <div
+                  className="flex items-center justify-between"
+                  onClick={() => setOpenMenu(openMenu === index ? null : index)}
+                >
+                  <Link href={item.href} className="block py-2 text-gray-700">
+                    {item.label}
+                  </Link>
+                  {item.submenu && <ChevronDown className="h-4 w-4" />}
+                </div>
+                {item.submenu && openMenu === index && (
+                  <ul className="mt-2 space-y-2 pl-4">
+                    {item.submenu.map((sub, subIndex) => (
+                      <li key={subIndex}>
+                        <Link
+                          href={sub.href}
+                          className="block py-1 text-gray-600"
+                        >
+                          {sub.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+        ) : null}
+      </div>
     </nav>
   );
 }

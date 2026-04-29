@@ -87,7 +87,7 @@ export default function ApplicationProceduresPage() {
           href="/course-terms-conditions/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-[184px] min-h-[45px] px-6 py-3 text-[13px] text-center font-raleway text-[#2e528e] bg-white border-[3px] border-[#2e528e] rounded-[3px] transition-all duration-300 ease-in-out hover:brightness-95 flex items-center justify-center leading-snug"
+          className="w-[184px] min-h-[45px] px-6 py-3 text-[13px] text-center text-[#2e528e] bg-white border-[3px] border-[#2e528e] rounded-[3px] transition-all duration-300 ease-in-out hover:brightness-95 flex items-center justify-center leading-snug"
         >
           Terms &amp; Conditions
         </a>
@@ -95,7 +95,7 @@ export default function ApplicationProceduresPage() {
           href="/contact-us/"
           target="_blank"
           rel="noopener noreferrer"
-          className="w-[184px] min-h-[45px] px-6 py-3 text-[13px] text-center font-raleway text-[#2e528e] bg-white border-[3px] border-[#2e528e] rounded-[3px] transition-all duration-300 ease-in-out hover:brightness-95 flex items-center justify-center leading-snug"
+          className="w-[184px] min-h-[45px] px-6 py-3 text-[13px] text-center text-[#2e528e] bg-white border-[3px] border-[#2e528e] rounded-[3px] transition-all duration-300 ease-in-out hover:brightness-95 flex items-center justify-center leading-snug"
         >
           Contact Us
         </a>

@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function QualificationsGrid() {
   return (
     <section className="bg-white py-12">
-      <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 font-[var(--font-raleway)]">
+      <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12">
 
         {/* Card 1 */}
         <div className="relative flex flex-col items-center text-center group">

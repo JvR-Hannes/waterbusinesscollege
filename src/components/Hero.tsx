@@ -9,7 +9,7 @@ export default function Hero() {
       <div className="relative z-10 container mx-auto px-4 py-10 flex flex-col md:flex-row items-center min-h-[60vh]">
         {/* Left Column - Text Content */}
         <div className="w-full md:w-1/2 min-w-0 space-y-4 break-words">
-          <h1 className="text-10xl md:text-6xl font-extrabold text-white leading-tight font-[var(--font-raleway)]">
+          <h1 className="text-10xl md:text-6xl font-extrabold text-white leading-tight">
             <span className="text-white">WATER BUSINESS COLLEGE</span>
           </h1>
           <div className="max-w-prose space-y-4">

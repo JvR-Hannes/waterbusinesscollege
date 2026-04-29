@@ -11,7 +11,7 @@ export default function Chatbot() {
       <button id="chatButton" style="z-index:1000; position: fixed; bottom: 20px; right: 110px; background-color: rgb(47,83,141); color: #fff; border: none; border-radius: 10px; width: 60px; height: 50px; font-size: 18px; cursor: pointer; box-shadow: 0 4px 8px rgba(0,0,0,0.2); display: flex; align-items: center; justify-content: center;">
         <span style="font-size:12px; line-height: 1;">Chat</span>
       </button>
-      <div id="chatPopup" style="z-index:1000; display: none; position: fixed; bottom: 20px; right: 110px; width: 300px; border: 3px solid rgb(47,83,141); border-radius: 5px; padding: 10px; background-color: rgb(109,190,251); box-shadow: 0 0 10px rgba(0,0,0,0.1); font-family: Arial, sans-serif; font-size: 15px;">
+      <div id="chatPopup" style="z-index:1000; display: none; position: fixed; bottom: 20px; right: 110px; width: 300px; border: 3px solid rgb(47,83,141); border-radius: 5px; padding: 10px; background-color: rgb(109,190,251); box-shadow: 0 0 10px rgba(0,0,0,0.1); font-family: inherit; font-size: 15px;">
         <button id="closeChat" style="position: absolute; top: 5px; right: 5px; background-color: transparent; border: none; font-size: 16px; font-weight: bold; cursor: pointer;">✖</button>
         <h1 style="text-align: center; color: #333; font-size: 18px;">WBC AI Chatbox</h1>
         <div id="chatContent" style="height: 300px; overflow-y: auto; border: 1px solid rgb(47,83,141); border-radius: 5px; padding: 10px; margin-bottom: 10px; background-color: #fff;"></div>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function QualificationStructure() {
   return (
-    <section className="bg-white py-6 font-[var(--font-raleway)]">
+    <section className="bg-white py-6">
       <div className="max-w-7xl mx-auto px-8">
         {/* White box with shadow */}
         <div className="bg-white rounded-2xl shadow-2xl p-8">

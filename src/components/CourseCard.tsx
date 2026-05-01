@@ -39,33 +39,36 @@ const CourseCard = ({
               <h3 className="mb-3 shrink-0 text-2xl leading-snug text-white-900">
                 <span className="text-white">{title}</span>
               </h3>
-              <div
-                className={`mb-3 overflow-hidden text-base leading-relaxed text-white-700 group-hover:text-white/95 [&_li]:mb-1 [&_p]:mb-2 [&_p:last-child]:mb-0 [&_ul]:mt-1 [&_ul]:space-y-1 [&_p]:text-base [&_li]:text-base [&_ul]:text-base ${
-                  variant === "large"
-                    ? "line-clamp-[12] md:line-clamp-[15]"
-                    : "line-clamp-[9] md:line-clamp-[11]"
-                }`}
-              >
-                {description}
-              </div>
-              <div className="shrink-0 pt-1">
-                {temporarilyUnavailable ? (
-                  <span
-                    className="inline-block rounded border border-red-600 bg-white px-5 py-2.5 text-base font-semibold text-red-600 shadow-sm"
-                    role="status"
-                  >
-                    Temporarily Unavailable
-                  </span>
-                ) : (
-                  href && (
-                    <Link
-                      href={href}
-                      className="inline-block rounded px-5 py-2.5 text-base font-medium text-white bg-blue-600 transition hover:bg-blue-700"
+              <div className="flex min-h-0 flex-1 flex-col">
+                <div
+                  className={`shrink-0 overflow-hidden pb-0.5 text-base leading-relaxed text-white-700 group-hover:text-white/95 [&_li]:mb-1 [&_p]:mb-2 [&_p:last-child]:mb-0 [&_ul]:mt-1 [&_ul]:space-y-1 [&_p]:text-base [&_li]:text-base [&_ul]:text-base ${
+                    variant === "large"
+                      ? "line-clamp-[12] md:line-clamp-[15]"
+                      : "line-clamp-[9] md:line-clamp-[11]"
+                  }`}
+                >
+                  {description}
+                </div>
+                <div className="min-h-0 flex-1" aria-hidden />
+                <div className="shrink-0 pt-1">
+                  {temporarilyUnavailable ? (
+                    <span
+                      className="inline-block rounded border border-red-600 bg-white px-5 py-2.5 text-base font-semibold text-red-600 shadow-sm"
+                      role="status"
                     >
-                      {buttonText || "View The Courses"}
-                    </Link>
-                  )
-                )}
+                      Temporarily Unavailable
+                    </span>
+                  ) : (
+                    href && (
+                      <Link
+                        href={href}
+                        className="inline-block rounded px-5 py-2.5 text-base font-medium text-white bg-blue-600 transition hover:bg-blue-700"
+                      >
+                        {buttonText || "View The Course"}
+                      </Link>
+                    )
+                  )}
+                </div>
               </div>
             </div>
           </div>

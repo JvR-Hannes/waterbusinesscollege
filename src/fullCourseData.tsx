@@ -9,6 +9,8 @@ export type Course = {
   category: string;
   requiresStudentDiscountApplication?: boolean;
   requiresQualificationApplication?: boolean;
+  /** Wider grid span on the All Courses catalogue (/courses). */
+  largeCatalogCard?: boolean;
 };
 
 const PORTAL_BASE_URL = "https://portal.waterbusinesscollege.co.za";
@@ -70,6 +72,7 @@ export const fullCourses: Course[] = [
     price: "R500.00",
     link: "/courses/modules/foundation-intro-basic-mathematics",
     category: "Foundational Courses",
+    largeCatalogCard: true,
   },
   {
     title: "Introduction to Basic Mathematics – Student",
@@ -78,6 +81,7 @@ export const fullCourses: Course[] = [
     price: "R100.00",
     category: "Foundational Courses",
     requiresStudentDiscountApplication: true,
+    largeCatalogCard: true,
   },
   {
     title: "Surface Water Management On Mines",

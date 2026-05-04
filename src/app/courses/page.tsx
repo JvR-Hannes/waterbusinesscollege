@@ -19,16 +19,26 @@ export default function CoursesPage() {
           <div key={category} className="mb-12">
             <h2 className="text-2xl font-bold text-blue-800 mb-6 border-b pb-2">{category}</h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {group.map((course, idx) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8">
+              {group.map((course, idx) => {
+                const enlarged = !!course.largeCatalogCard;
+                return (
                 <div
                   key={`${category}-${idx}`}
-                  className="flex flex-col h-[500px] w-full max-w-[300px] border border-gray-300 rounded-lg shadow hover:shadow-lg transition overflow-hidden bg-white"
+                  className={
+                    enlarged
+                      ? "flex flex-col h-[500px] w-full sm:col-span-2 lg:col-span-2 max-w-none border border-gray-300 rounded-lg shadow hover:shadow-lg transition overflow-hidden bg-white"
+                      : "flex flex-col h-[500px] w-full max-w-[300px] border border-gray-300 rounded-lg shadow hover:shadow-lg transition overflow-hidden bg-white"
+                  }
                 >
                   <img
                     src={course.image}
                     alt={course.title}
-                    className="w-full h-80 object-contain bg-gray-50 p-2"
+                    className={
+                      enlarged
+                        ? "w-full h-80 object-contain bg-gray-50 p-3"
+                        : "w-full h-80 object-contain bg-gray-50 p-2"
+                    }
                   />
 
                   <div className="p-4 flex flex-col flex-grow">
@@ -78,7 +88,8 @@ export default function CoursesPage() {
                     </div>
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
         ))}

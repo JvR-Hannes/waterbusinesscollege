@@ -2,7 +2,7 @@ import CourseCard from "@/components/CourseCard";
 
 const mockCourses = [
   {
-    title: "642605001-KM-01 // Module 1 // NQF 4 (CREDITS: 5)",
+    title: "",
     description: (
       <>
         <p>

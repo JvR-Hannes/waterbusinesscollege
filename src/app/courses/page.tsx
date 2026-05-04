@@ -19,36 +19,26 @@ export default function CoursesPage() {
           <div key={category} className="mb-12">
             <h2 className="text-2xl font-bold text-blue-800 mb-6 border-b pb-2">{category}</h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 gap-y-8">
-              {group.map((course, idx) => {
-                const enlarged = !!course.largeCatalogCard;
-                return (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+              {group.map((course, idx) => (
                 <div
                   key={`${category}-${idx}`}
-                  className={
-                    enlarged
-                      ? "flex flex-col h-[500px] w-full sm:col-span-2 lg:col-span-2 max-w-none border border-gray-300 rounded-lg shadow hover:shadow-lg transition overflow-hidden bg-white"
-                      : "flex flex-col h-[500px] w-full max-w-[300px] border border-gray-300 rounded-lg shadow hover:shadow-lg transition overflow-hidden bg-white"
-                  }
+                  className="flex flex-col h-[420px] w-full max-w-[300px] border border-gray-300 rounded-lg shadow hover:shadow-lg transition overflow-hidden bg-white"
                 >
                   <img
                     src={course.image}
                     alt={course.title}
-                    className={
-                      enlarged
-                        ? "w-full h-80 object-contain bg-gray-50 p-3"
-                        : "w-full h-80 object-contain bg-gray-50 p-2"
-                    }
+                    className="w-full h-64 object-contain bg-gray-50 p-2"
                   />
 
-                  <div className="p-4 flex flex-col flex-grow">
-                    <h3 className="text-base font-semibold text-gray-800 mb-2">
+                  <div className="p-3 flex flex-col flex-grow">
+                    <h3 className="text-sm font-semibold text-gray-800 mb-1.5 leading-snug">
                       {course.title}
                     </h3>
 
                     <div className="flex-grow flex flex-col justify-end">
                       {course.price && (
-                        <div className="flex justify-between text-sm text-gray-800 mb-4">
+                        <div className="flex justify-between text-xs text-gray-800 mb-3">
                           <span className="text-gray-500">Price:</span>
                           <span className="font-bold">{course.price}</span>
                         </div>
@@ -88,8 +78,7 @@ export default function CoursesPage() {
                     </div>
                   </div>
                 </div>
-                );
-              })}
+              ))}
             </div>
           </div>
         ))}

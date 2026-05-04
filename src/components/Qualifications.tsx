@@ -10,7 +10,7 @@ export default function Qualifications() {
         {/* Primary Heading */}
         <h2 className="text-4xl font-bold text-gray-800 mb-2">Qualifications</h2>
 
-        <div className="text-md text-gray-600 max-w-4xl mx-auto mt-6 space-y-4 text-left">
+        <div className="text-md text-gray-600 max-w-7xl mx-auto mt-6 space-y-4 text-left">
           <p>
             WBC is preparing to renew the Quality Council for Trades and
             Occupations (QCTO) Accreditation.
@@ -24,7 +24,7 @@ export default function Qualifications() {
             >
               WBC Overview
             </Link>{" "}
-            {`under the website heading 'WBC Programs Overview' for detailed information on the pilot programme. A video of our prototype laboratory / practical site can be seen by accessing the following YouTube link:`}<br/>{" "}
+            {`under the website heading 'WBC Programs Overview' for detailed information on the pilot programme. A video of our prototype laboratory / practical site can be seen by accessing the following YouTube link:`}{" "}
             <a
               href="https://www.youtube.com/watch?v=RndYrlr6L7Q"
               target="_blank"

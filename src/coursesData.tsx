@@ -31,7 +31,7 @@ export const courses: Course[] = [
         </p>
       </>
     ),
-    image: "/images/courses/waterreticulation.png",
+    image: "/images/courses/water-reticulation.png",
     category: "Occupational Qualifications",
     href: "/courses/occupational-qualifications",
     temporarilyUnavailable: true,
@@ -54,7 +54,7 @@ export const courses: Course[] = [
         </p>
       </>
     ),
-    image: "/images/courses/foundation.png",
+    image: "/images/courses/online-foundation.png",
     category: "Foundation Courses",
     href: "/courses/foundation-courses",
   },
@@ -107,7 +107,7 @@ export const courses: Course[] = [
         <p>Significantly reduced course fees for tertiary students.</p>
       </>
     ),
-    image: "/images/courses/diy.png",
+    image: "/images/courses/diy-industry-aligned-courses.png",
     category: "DIY Courses",
     href: "/courses/diy-courses",
   },

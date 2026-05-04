@@ -63,6 +63,23 @@ export const fullCourses: Course[] = [
     requiresQualificationApplication: true,
   },
   {
+    title: "Introduction to Basic Mathematics",
+    image: "/images/courses/2-course-image.png",
+    description:
+      "Online self-assessment covering exponents, scientific notation, equations, ratios and proportions, measurement, and graphs — for technical staff and learners preparing for entry-level occupational qualifications.",
+    price: "R500.00",
+    link: "/courses/modules/foundation-intro-basic-mathematics",
+    category: "Foundational Courses",
+  },
+  {
+    title: "Introduction to Basic Mathematics – Student",
+    image: "/images/courses/2-course-image.png",
+    description: "Student",
+    price: "R100.00",
+    category: "Foundational Courses",
+    requiresStudentDiscountApplication: true,
+  },
+  {
     title: "Surface Water Management On Mines",
     image: "/images/courses/surfacewater.png",
     description: "",

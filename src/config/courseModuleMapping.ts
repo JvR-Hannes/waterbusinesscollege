@@ -62,7 +62,7 @@ export const courseModuleMapping: {
     modules: [
       {
         title: "642605001-KM-01 // Module 1 // NQF 4 (CREDITS: 5)",
-        href: "/courses/foundation-courses",
+        href: "/courses/modules/foundation-intro-basic-mathematics",
       },
     ],
   },

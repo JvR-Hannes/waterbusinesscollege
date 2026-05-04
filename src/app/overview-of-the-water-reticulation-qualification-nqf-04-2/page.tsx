@@ -10,7 +10,7 @@ export default function WaterReticulationQualification() {
       </h1>
       <div className="w-full h-[75vh]">
         <iframe
-          src="/pdfs/overview-wbc.pdf"
+          src="/pdfs/overview-of-wbc-pilot-programmes-august-2025.pdf"
           className="w-full h-full border rounded shadow"
         />
       </div>

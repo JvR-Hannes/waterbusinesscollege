@@ -23,7 +23,7 @@ const mockCourses = [
         <p><strong>ECSA Accreditation – 2 CPD Points</strong></p>
       </>
     ),
-    imageUrl: "/images/courses/waste.png",
+    imageUrl: "/images/courses/waste-and-ard-assessments.png",
     href: "/courses/modules/diycourses", // or the actual course detail path if available
   },
   {
@@ -45,7 +45,7 @@ const mockCourses = [
         <p><strong>ECSA Accreditation – 3 CPD Points</strong></p>
       </>
     ),
-    imageUrl: "/images/courses/basic-theory-on-pumps.png",
+    imageUrl: "/images/courses/basic-theory.png",
     href: "/courses/modules/diypumps", // or the actual course detail path if available
   },
 ];

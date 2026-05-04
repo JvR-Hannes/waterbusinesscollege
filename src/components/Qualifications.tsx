@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Qualifications() {
   return (
     <section className="py-16 bg-white">
@@ -8,12 +10,37 @@ export default function Qualifications() {
         {/* Primary Heading */}
         <h2 className="text-4xl font-bold text-gray-800 mb-2">Qualifications</h2>
 
-        {/* Secondary Heading */} {/* Adjust Width to sentence fits one line*/}
-        <h3 className="text-md text-gray-600 max-w-7xl mx-auto">
-          <span className="bg-white px-2 py-1 rounded w-full">
-            Water Business College (WBC) is an accredited Skills Development Provider (SDP) implementing occupational qualifications in the water and related engineering sectors.
-          </span>
-        </h3>
+        <div className="text-md text-gray-600 max-w-4xl mx-auto mt-6 space-y-4 text-left">
+          <p>
+            WBC is preparing to renew the Quality Council for Trades and
+            Occupations (QCTO) Accreditation.
+          </p>
+          <p>
+            WBC conducted a pilot training programme for the Water Reticulation
+            Practitioner (NQF 04) qualification during 2022-2024. Please refer to{" "}
+            <Link
+              href="/overview-of-the-water-reticulation-qualification-nqf-04-2"
+              className="text-blue-600 underline underline-offset-2 hover:text-blue-800"
+            >
+              WBC Overview
+            </Link>{" "}
+            {`under the website heading 'WBC Programs Overview' for detailed information on the pilot programme. A video of our prototype laboratory / practical site can be seen by accessing the following YouTube link:`}<br/>{" "}
+            <a
+              href="https://www.youtube.com/watch?v=RndYrlr6L7Q"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 underline underline-offset-2 hover:text-blue-800 break-all"
+            >
+              https://www.youtube.com/watch?v=RndYrlr6L7Q
+            </a>
+            .
+          </p>
+          <p>
+            WBC currently focuses on implementing various industry-aligned skills
+            courses / DIY courses for both the water services and water resources
+            sectors. Selected courses are CPD accredited.
+          </p>
+        </div>
       </div>
     </section>
   );

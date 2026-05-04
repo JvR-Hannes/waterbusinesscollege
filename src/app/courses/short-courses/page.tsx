@@ -18,7 +18,7 @@ const mockCourses = [
         <p><strong>ECSA Accreditation – 1 CPD Point</strong></p>
       </>
     ),
-    imageUrl: "/images/courses/short.png",
+    imageUrl: "/images/courses/surface-water.png",
     href: "/courses/modules/shortcourses", // or the actual course detail path if available
   },
 ];

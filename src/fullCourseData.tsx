@@ -16,7 +16,7 @@ const PORTAL_CART_URL = `${PORTAL_BASE_URL}/cart-2/`;
 
 function buildPortalPurchaseLink(productId: number): string {
   return `${PORTAL_BASE_URL}/?add-to-cart=${productId}&redirect_to=${encodeURIComponent(
-    PORTAL_CART_URL
+    PORTAL_CART_URL,
   )}`;
 }
 
@@ -68,7 +68,7 @@ export const fullCourses: Course[] = [
     description:
       "Online self-assessment covering exponents, scientific notation, equations, ratios and proportions, measurement, and graphs — for technical staff and learners preparing for entry-level occupational qualifications.",
     price: "R500.00",
-    link: "/courses/modules/foundation-intro-basic-mathematics",
+    link: buildPortalPurchaseLink(8719),
     category: "Foundational Courses",
   },
   {

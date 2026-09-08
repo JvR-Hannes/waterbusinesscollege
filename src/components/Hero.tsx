@@ -10,7 +10,7 @@ export default function Hero() {
         {/* Left Column - Text Content */}
         <div className="w-full md:w-1/2 min-w-0 space-y-4 break-words">
           <h1 className="text-10xl md:text-6xl font-extrabold text-white leading-tight">
-            <span className="text-white">WATER BUSINESS COLLEGE</span>
+            <span className="text-white">WATER BUSINESS COLLEGE / ACADEMY</span>
           </h1>
           <div className="max-w-prose space-y-4">
             <p className="text-base text-gray-100 font-small">

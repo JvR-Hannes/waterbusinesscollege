@@ -2,18 +2,17 @@ import CourseCard from "@/components/CourseCard";
 
 const mockCourses = [
   {
-    title: "",
+    title: "Introduction to Basic Mathematics",
     description: (
       <>
         <p>
-          This{" "}
-          <strong>
-            online Introduction to Basic Mathematics self-assessment course
-          </strong>{" "}
-          focusses on exponents; scientific notation; dimensional analyses;
-          rounding and estimation; solving equations and for unknown values;
-          basic descriptive statistics; linear, area and volume measurements;
-          graphs, etc.
+          Numbers are at the heart of every technical role. This self-paced
+          foundation course equips water-sector technicians, operational staff,
+          and scholars with basic core numeracy skills — covering exponents,
+          scientific notation, dimensional analysis, rounding, mensuration,
+          descriptive statistics, functions, and more. The Introduction to Basic
+          Mathematics self-study course will assist participants with basic data
+          analyses and report writing. No prior knowledge required.
         </p>
         <p>
           Target audiences: <strong>Technical staff</strong> enrolling for
@@ -25,6 +24,25 @@ const mockCourses = [
     ),
     imageUrl: "/images/courses/introduction-to-basic-math.png",
     href: "/courses/modules/foundation-intro-basic-mathematics",
+  },
+  {
+    title: "Introduction to Algebra",
+    description: (
+      <>
+        <p>
+          This self-paced course provides a structured foundation in algebra,
+          from core operations through to quadratic equations, illustrated
+          throughout with water-sector applications. For scholars, a solid grasp
+          of algebra underpins academic performance and readiness for further
+          technical study. The course also supports water-sector technicians
+          pursuing upskilling, and adult learners seeking a structured
+          refresher. Delivered online via the WBC Tutor LMS, learners may begin
+          at any time, working through thirteen topics at their own pace.
+        </p>
+      </>
+    ),
+    imageUrl: "/images/courses/introToAlgebraIcon.png",
+    href: "/courses/modules/foundation-intro-algebra",
   },
 ];
 

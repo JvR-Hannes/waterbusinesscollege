@@ -64,7 +64,7 @@ export const fullCourses: Course[] = [
   },
   {
     title: "Introduction to Basic Mathematics",
-    image: "/images/courses/2-course-image.png",
+    image: "/images/courses/introToBasicMath.png",
     description:
       "Online self-assessment covering exponents, scientific notation, equations, ratios and proportions, measurement, and graphs — for technical staff and learners preparing for entry-level occupational qualifications.",
     price: "R500.00",
@@ -73,7 +73,24 @@ export const fullCourses: Course[] = [
   },
   {
     title: "Introduction to Basic Mathematics – Student",
-    image: "/images/courses/2-course-image.png",
+    image: "/images/courses/introToBasicMath.png",
+    description: "Student",
+    price: "R100.00",
+    category: "Foundational Courses",
+    requiresStudentDiscountApplication: true,
+  },
+  {
+    title: "Introduction to Algebra",
+    image: "/images/courses/introToAlgebra.png",
+    description:
+      "Online self-assessment covering exponents, scientific notation, equations, ratios and proportions, measurement, and graphs — for technical staff and learners preparing for entry-level occupational qualifications.",
+    price: "R500.00",
+    link: buildPortalPurchaseLink(10495),
+    category: "Foundational Courses",
+  },
+  {
+    title: "Introduction to Algebra – Student",
+    image: "/images/courses/introToAlgebra.png",
     description: "Student",
     price: "R100.00",
     category: "Foundational Courses",

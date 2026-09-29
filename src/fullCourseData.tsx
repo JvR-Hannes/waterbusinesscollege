@@ -84,7 +84,7 @@ export const fullCourses: Course[] = [
     image: "/images/courses/introToAlgebra.png",
     description:
       "Online self-assessment covering exponents, scientific notation, equations, ratios and proportions, measurement, and graphs — for technical staff and learners preparing for entry-level occupational qualifications.",
-    price: "R500.00",
+    price: "R250.00",
     link: buildPortalPurchaseLink(10495),
     category: "Foundational Courses",
   },
@@ -92,7 +92,7 @@ export const fullCourses: Course[] = [
     title: "Introduction to Algebra – Student",
     image: "/images/courses/introToAlgebra.png",
     description: "Student",
-    price: "R100.00",
+    price: "R50.00",
     category: "Foundational Courses",
     requiresStudentDiscountApplication: true,
   },

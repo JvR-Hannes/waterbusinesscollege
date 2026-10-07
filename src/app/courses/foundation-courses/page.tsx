@@ -44,6 +44,29 @@ const mockCourses = [
     imageUrl: "/images/courses/introToAlgebraIcon.png",
     href: "/courses/modules/foundation-intro-algebra",
   },
+  {
+    title: "Algebraic Functions & Graphs",
+    description: (
+      <>
+        <p>
+          From pump curves to chlorine decay charts, graphs are used everywhere
+          - including in the water sector. This self-paced introductory course
+          builds confidence in linear, quadratic and exponential functions
+          through clear explanations and practical examples from the
+          water-sector.
+        </p>
+        <p>
+          This self-study short course is developed for mid-level scholars
+          needing exam-ready graph skills as well as for junior technical staff
+          and adult learners wanting practical mathematical fluency. For
+          scholars, mastering graphs is key to maths success and a springboard
+          into technical careers. Start today!
+        </p>
+      </>
+    ),
+    imageUrl: "/images/courses/functionsAndGraphs.png",
+    href: "/courses/modules/foundation-intro-functions-and-graphs",
+  },
 ];
 
 export default function FoundationCourses() {

@@ -97,6 +97,23 @@ export const fullCourses: Course[] = [
     requiresStudentDiscountApplication: true,
   },
   {
+    title: "Algebraic Functions & Graphs",
+    image: "/images/courses/functionsAndGraphs.png",
+    description:
+      "Online self-assessment covering exponents, scientific notation, equations, ratios and proportions, measurement, and graphs — for technical staff and learners preparing for entry-level occupational qualifications.",
+    price: "R250.00",
+    link: buildPortalPurchaseLink(10854),
+    category: "Foundational Courses",
+  },
+  {
+    title: "Algebraic Functions & Graphs – Student",
+    image: "/images/courses/functionsAndGraphs.png",
+    description: "Student",
+    price: "R50.00",
+    category: "Foundational Courses",
+    requiresStudentDiscountApplication: true,
+  },
+  {
     title: "Surface Water Management On Mines",
     image: "/images/courses/surfacewater.png",
     description: "",

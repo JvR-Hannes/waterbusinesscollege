@@ -67,6 +67,24 @@ const mockCourses = [
     imageUrl: "/images/courses/functionsAndGraphs.png",
     href: "/courses/modules/foundation-intro-functions-and-graphs",
   },
+  {
+    title: "Descriptive Statistics: Turn data / numbers into insight.",
+    description: (
+      <>
+        <p>
+          Learn to summarise, interpret and graph real data: averages, spread,
+          percentiles, histograms, boxplots and pie charts. Examples come from
+          water-sector data such as chlorine, turbidity and groundwater levels.
+          Essential for mid-level scholars (Grade 10–11): build the
+          data-handling skills that exams and further study demand, with worked
+          examples, practice problems and a quiz. Also ideal for young water
+          technicians, operators and returning adult learners.
+        </p>
+      </>
+    ),
+    imageUrl: "/images/courses/descriptiveStats.png",
+    href: "/courses/modules/foundation-intro-to-statistics",
+  },
 ];
 
 export default function FoundationCourses() {

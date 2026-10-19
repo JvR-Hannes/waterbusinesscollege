@@ -114,6 +114,23 @@ export const fullCourses: Course[] = [
     requiresStudentDiscountApplication: true,
   },
   {
+    title: "Descriptive Statistics",
+    image: "/images/courses/descriptiveStatImg.png",
+    description:
+      "Learn to summarise, interpret and graph real data: averages, spread, percentiles, histograms, boxplots and pie charts. Examples come from water-sector data such as chlorine, turbidity and groundwater levels.",
+    price: "R250.00",
+    link: buildPortalPurchaseLink(11025),
+    category: "Foundational Courses",
+  },
+  {
+    title: "Descriptive Statistics – Student",
+    image: "/images/courses/descriptiveStatImg.png",
+    description: "Student",
+    price: "R50.00",
+    category: "Foundational Courses",
+    requiresStudentDiscountApplication: true,
+  },
+  {
     title: "Surface Water Management On Mines",
     image: "/images/courses/surfacewater.png",
     description: "",
